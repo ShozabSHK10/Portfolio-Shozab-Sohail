@@ -1,0 +1,43 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  background-color: #ffa703;
+  text-decoration: none;
+  color: black;
+  font-size: 1.25rem;
+  line-height: 1;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.button span {
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.button::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 180%);
+  transition: transform 0.35s ease;
+  color: white;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background-color: #2a2b2e;
+}
+
+.button:hover span {
+  transform: translateY(-180%);
+}
+
+.button:hover::after {
+  transform: translate(-50%, -50%);
+}
