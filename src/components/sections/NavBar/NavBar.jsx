@@ -40,7 +40,11 @@ function NavBar() {
 
       tlRef.current
         .from(".navbar-left", { x: -40, opacity: 0 }, "0")
-        .from(".nav-link", { y: -40, opacity: 0, stagger: 0.1, clearProps: "all" }, "0")
+        .from(
+          ".nav-link",
+          { y: -40, opacity: 0, stagger: 0.1, clearProps: "all" },
+          "0",
+        )
         .from(".navbar-hamburger", { x: 40, opacity: 0 }, "0");
     },
     { scope: navRef },
@@ -62,14 +66,14 @@ function NavBar() {
         </a>
 
         <div className="navbar-right">
-          <a href="#about" className="nav-link"  data-text="About">
+          <a href="#about" className="nav-link" data-text="About">
             <span>About</span>
           </a>
-          <a href="#works" className="nav-link"  data-text="Works">
+          <a href="#works" className="nav-link" data-text="Works">
             <span>Works</span>
           </a>
           <a href="#services" className="nav-link" data-text="Services">
-           <span>Services</span>
+            <span>Services</span>
           </a>
           <a
             href="/resume.pdf"
@@ -114,23 +118,19 @@ function NavBar() {
             Services
           </a>
           <a
-            href="#contact"
-            className="drawer-link"
-            onClick={() => toggleMenu(false)}
-          >
-            Contact
-          </a>
-        </div>
-        <div className="drawer-contact">
-          <a
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="nav-link"
+            className="drawer-link"
           >
             Resume
           </a>
         </div>
+
+        <div className="menu-copyright">
+          &copy;2026 Shozab Sohail. All rights reserved.
+        </div>
+
       </div>
     </>
   );

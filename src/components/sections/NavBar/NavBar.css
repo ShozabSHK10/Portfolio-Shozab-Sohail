@@ -119,19 +119,12 @@
   color: #ffffff;
 }
 
-.drawer-contact {
+.menu-copyright {
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  flex-shrink: 1;
-  gap: 0.5rem;
+  color: #969696;
+  font-size: 1rem;
 }
 
-.drawer-contact a {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: #969696;
-}
 
 @media (max-width: 900px) {
   .navbar{

@@ -1,4 +1,3 @@
-import "./Home.css" 
 import Hero from "../components/sections/Hero/Hero.jsx";
 import About from "../components/sections/About/About.jsx";
 import Works from "../components/sections/Works/Works.jsx";
@@ -13,9 +12,7 @@ function Home() {
       <About />
       <Works />
       <Services />
-      <div className="footerWrapper">
       <Footer />
-      </div>
     </>
   );
 }
