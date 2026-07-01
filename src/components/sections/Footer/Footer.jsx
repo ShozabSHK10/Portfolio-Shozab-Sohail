@@ -58,7 +58,7 @@ function Footer() {
             <a className="nav" href="#about">
               About <span className="nav-arrow">→</span>
             </a>
-            <a className="nav" href="#work">
+            <a className="nav" href="#works">
               Work <span className="nav-arrow">→</span>
             </a>
             <a
