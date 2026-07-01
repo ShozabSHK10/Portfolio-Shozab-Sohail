@@ -2,7 +2,7 @@ import img1 from "../../assets/projectImages/imagesPF/imgOnePF.png";
 import img2 from "../../assets/projectImages/imagesPF/imgTwoPF.png";
 import img3 from "../../assets/projectImages/imagesPF/imgThreePF.png";
 import img4 from "../../assets/projectImages/imagesPF/imgFourPF.png";
-import img5 from "../../assets/projectImages/imagespf/imgFivePF.png";
+import img5 from "../../assets/projectImages/imagesPF/imgFivePF.png";
 
 function imagesPF() {
   return (
