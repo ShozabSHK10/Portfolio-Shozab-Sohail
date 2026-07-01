@@ -1,17 +1,19 @@
 .hero {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: sticky;
   top: 0;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  padding: 0rem 2rem 0rem;
+  height: calc(100vh - 56px);
+  padding: 0rem 2rem 1rem;
   background: #111111;
+  gap: 8rem;
   z-index: 0;
 }
 
 .hero-content {
   display: flex;
+  align-content: center;
   flex-direction: column;
   justify-content: space-between;
   gap: 1.5rem;
@@ -42,6 +44,7 @@
   line-height: 1;
   overflow: hidden; 
   text-align: center; 
+
 }
 
 .my-name {
@@ -52,13 +55,18 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  line-height: 1;
+  line-height: 0.8;
   overflow: hidden;
 }
 
 @media (max-width: 900px) {
    .hero{
     padding: 0rem 1rem 1rem;
+    gap: 0rem;
+   }
+
+   .hero-content{
+      margin: auto 0;
    }
 }
 

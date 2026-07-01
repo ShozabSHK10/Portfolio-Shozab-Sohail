@@ -12,11 +12,11 @@ function App() {
     <>
       <Preloader onComplete={() => setPreloaderDone(true)} />
       <div style={{ visibility: preloaderDone ? "visible" : "hidden" }}></div>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/works/:id" element={<WorkDetails />} />
-        </Routes>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home preloaderDone={preloaderDone} />} />
+        <Route path="/works/:id" element={<WorkDetails />} />
+      </Routes>
     </>
   );
 }

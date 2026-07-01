@@ -1,6 +1,6 @@
 .footer {
   position: sticky;
-  padding: 7rem 2rem 2rem;
+  padding: 3rem 2rem;
   background: #262626;
   z-index: 2;
 }
@@ -167,7 +167,7 @@
 
 @media (max-width: 900px) {
   .footer {
-    padding: 7rem 1rem 1rem;
+    padding: 2rem 1rem 1rem;
   }
 
   .footer-container {

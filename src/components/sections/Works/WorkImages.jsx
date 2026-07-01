@@ -28,11 +28,15 @@ function WorkImages() {
 
   return (
     <section className="work-page">
-      <section>
-        <WorkDescription {...work} />
-      </section>
+      
+        <section className="upper-navigation">
+          <a onClick={() => navigate("/")} className="back-toHome">
+            <span>←</span> Back To Home 
+          </a>
+        </section>
 
       <section className="work-imagesContainer">
+        <WorkDescription {...work} />
         <div className="work-images">
           {imageComponents[id] ?? (
             <div className="image-placeholder-layout">

@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "../../../animations/gsap";
 import logo from "/logo/SHK.svg";
 
-function NavBar() {
+function NavBar({ preloaderDone }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef(null);
   const tlRef = useRef(null);
@@ -47,16 +47,14 @@ function NavBar() {
         )
         .from(".navbar-hamburger", { x: 40, opacity: 0 }, "0");
     },
-    { scope: navRef },
+    { scope: navRef }, // build once on mount, no dependency on preloaderDone
   );
 
-  // preloader event listener
-
   useEffect(() => {
-    const play = () => tlRef.current?.play();
-    window.addEventListener("preloaderDone", play, { once: true });
-    return () => window.removeEventListener("preloaderDone", play);
-  }, []);
+    if (preloaderDone) {
+      tlRef.current?.play();
+    }
+  }, [preloaderDone]);
 
   return (
     <>
@@ -130,7 +128,6 @@ function NavBar() {
         <div className="menu-copyright">
           &copy;2026 Shozab Sohail. All rights reserved.
         </div>
-
       </div>
     </>
   );

@@ -10,33 +10,28 @@ function WorkDescription({
 }) {
   return (
     <div className="card-container">
-      <div className="card-title">
-        {title}
-      </div>
+      <div className="card-title">{title}</div>
+
       <div className="card-description">
-        <div className="overview-text">{overview}</div>
         <div className="work-info">
-          <div className="info-groups">
-            <span>Client</span>
-            <p>{client}</p>
+
+          <div className="info-groups info-year">
+            <span className="work-year">YEAR</span>
+            <p className="year-value">{year}</p>
           </div>
-          <div className="info-groups">
-            <span>Year</span>
-            <p>{year}</p>
-          </div>
-          <div className="info-groups">
-            <span>Deliverables</span>
+
+          <div className="info-groups info-deliverables">
+            <span className="deliverables-label">DELIVERABLES</span>
             {deliverables.map((d, i) => (
-              <p key={i}>{d}</p>
+              <p key={i} className="deliverable-item">
+                {d}
+              </p>
             ))}
           </div>
-          <div className="info-groups">
-            <span>Role</span>
-            {role.map((d, i) => (
-              <p key={i}>{d}</p>
-            ))}
-          </div>
+
         </div>
+
+        <div className="overview-text">{overview}</div>
       </div>
     </div>
   );
