@@ -1,5 +1,5 @@
 import "./Hero.css";
-import Navbar from "../NavBar/Navbar.jsx";
+import NavBar from "../NavBar/NavBar.jsx";
 import Button from "../../button/Button.jsx";
 import image from "/logo/GLOBE.svg";
 import useFitText from "../../../hooks/useFitText.js";
@@ -11,7 +11,7 @@ function Hero() {
 
   return (
     <section className="hero" id="hero">
-      <Navbar />
+      <NavBar />
       <div className="hero-content">
         <div className="hero-image">
           <img src={image} alt="Hero Image" />
