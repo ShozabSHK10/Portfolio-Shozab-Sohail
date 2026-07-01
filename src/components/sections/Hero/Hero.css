@@ -41,7 +41,6 @@
 }
 
 .hero-name{
-  line-height: 1;
   overflow: hidden; 
   text-align: center; 
 
@@ -55,7 +54,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  line-height: 0.8;
+  line-height: 0.7;
+  letter-spacing: -0.02em;
   overflow: hidden;
 }
 
