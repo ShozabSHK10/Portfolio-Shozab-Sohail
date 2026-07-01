@@ -1,0 +1,42 @@
+.works {
+  display: flex;
+  position: sticky;
+  flex-direction: column;
+  width: 100%;
+  padding: 7rem 2rem;
+  background: #262626;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.works-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Pavot-Bold";
+  padding: 0rem 1rem;
+  font-size: clamp(4rem, 12vw, 15rem);
+  color: #fff;
+}
+
+.works-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1400px) {
+  .works-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .works {
+    padding: 7rem 1rem;
+  }
+
+  .works-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

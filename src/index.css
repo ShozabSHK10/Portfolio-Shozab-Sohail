@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Pavot-Bold";
+  src: url("/fonts/Pavot-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Pavot-Regular";
+  src: url("/fonts/Pavot-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/InterVariable.ttf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,7 +24,8 @@ html, body {
   padding: 0;
   overflow-x: hidden;
   height: 100%;
-  font-family:"", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
   scroll-behavior: smooth;
 }
 

@@ -1,0 +1,47 @@
+.services {
+    display: flex;
+    position: sticky;
+    background: #262626;
+    padding: 5rem 2rem;
+    z-index: 2;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    background: #111111;
+    padding: 3rem;
+    gap: clamp(2rem, 3vw, 5rem);
+    border-radius: 1rem;
+}
+
+.services-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Pavot-Bold";
+    letter-spacing: 0.03em;
+    font-size: clamp(4rem, 8vw, 8rem);
+    color: #969696;
+}
+
+.services-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (max-width: 1300px) {
+    .services-content{
+        padding-right: 0rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .services {
+        padding: 7rem 1rem;
+    }
+
+    .services-container {
+        padding: 2rem 1rem;
+    }
+}

@@ -4,10 +4,12 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 0.5rem 1rem;
-  background-color: #ffa703;
+  padding: 0.75rem;
+  border-radius: 1.25rem;
+  background-color: #969696;
+  border: 1px solid #171717;
   text-decoration: none;
-  color: black;
+  color: #171717;
   font-size: 1.25rem;
   line-height: 1;
   white-space: nowrap;
@@ -26,12 +28,13 @@
   top: 50%;
   transform: translate(-50%, 180%);
   transition: transform 0.35s ease;
-  color: white;
+  color: #ffffff;
   white-space: nowrap;
 }
 
 .button:hover {
-  background-color: #2a2b2e;
+  background-color: #171717;
+  border: 1px solid #969696;
 }
 
 .button:hover span {
@@ -40,4 +43,11 @@
 
 .button:hover::after {
   transform: translate(-50%, -50%);
+}
+
+@media (max-width: 600px) {
+  .button{
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
 }

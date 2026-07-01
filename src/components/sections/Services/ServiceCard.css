@@ -1,0 +1,71 @@
+.service-card{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0rem;
+    color: #fff;
+    gap: clamp(2rem, 3vw, 3rem);
+    border-bottom: 1px solid #3f3f3f;
+}
+
+.service-number{
+    display: flex;
+    flex: 0.5;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    line-height: 1.5;
+}
+
+.service-headings {
+    display: flex;
+    flex-direction: column;
+    flex: 1.5;
+    justify-content: space-between;
+}
+
+.service-title {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.service-subtitle {
+    font-size: clamp(1rem, 1.5vw, 1.55rem);
+    line-height: 1.2;
+    color: #969696;
+}
+
+.service-image {
+    display: flex; 
+    flex: 1;
+    min-width: 0;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: clamp(15rem, 25vw, 25rem);
+    height: clamp(10rem, 10vw, 15rem);    
+    transition: opacity 1s ease;
+}
+
+
+.service-description {
+    display: flex;
+    min-width: 0;
+    flex: 2;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    line-height: 1.5;
+}
+
+@media (max-width: 1100px) {
+    .service-card {
+        flex-direction: column;
+    }  
+    
+    .service-image {
+        justify-content: flex-start;
+        flex: 4;
+    }
+}
+

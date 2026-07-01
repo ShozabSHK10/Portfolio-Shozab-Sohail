@@ -1,0 +1,45 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.preloader__lines {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.preloader__line {
+  flex: 1;
+  background: #737373;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.preloader__counter {
+  position: relative;
+  font-family: "Pavot-Bold";
+  font-size: clamp(80px, 14vw, 160px);
+  font-weight: 400;
+  color: #969696;
+  letter-spacing: -0.04em;
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+
+.preloader__bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: #333;
+  width: 0%;
+  z-index: 3;
+}

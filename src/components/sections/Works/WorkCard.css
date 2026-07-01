@@ -1,0 +1,58 @@
+.workCard{
+   display: flex;
+    flex-direction: column;
+    border-radius: clamp(0.75rem, 1vw, 1rem);
+    padding: 1rem;
+    gap: 1rem;
+    background: #111111;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.workImage{
+    display: flex;
+    justify-content: center;
+    flex-shrink: 1;
+}
+
+.workImage img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.workInfo {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 0 0.5rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.clientInfo {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 1rem;
+}
+
+.clientInfo img {
+    width: clamp(2rem, 3vw, 3rem);
+    height: auto;
+    border-radius: 1.5rem;
+}
+
+.clientLogo {
+    display: flex;
+}
+
+.workDetail {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    color: #ffffff;
+    gap: 1rem;
+}
+
