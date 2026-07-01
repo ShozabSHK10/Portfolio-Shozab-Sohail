@@ -7,7 +7,7 @@ const works = [
     overview: `Bahjat Al Afkar is a Muscat-based company specializing in interior fitouts, steel fabrication, and signage. 
     I designed and built their site from the ground up to reflect the precision and craftsmanship of their work — clean structure, confident typography, 
     and motion that feels deliberate rather than decorative.`,
-    year: 2025,
+    year: 2026,
     deliverables: ["Web Design", "Web Development", "Brand & Visual Identity"],
   },
 
@@ -19,7 +19,7 @@ const works = [
     overview: `Sihr Design Studio is an architectural practice working across interior design, space planning, and architectural drawing. 
     At the heart of their philosophy is a simple belief: the spaces people live and work in should feel intentional, not accidental.
     This identity was built to reflect that same intentionality — quiet, considered, and grounded in material honesty.`,
-    year: 2024,
+    year: 2026,
     deliverables: ["Landing Page", "Visual Identity"],
   },
 
@@ -33,7 +33,7 @@ const works = [
           Drawing inspiration from blooming forms, rounded edges, and gentle natural movement, the visual system balances softness with clarity.
           A muted pastel palette, warm textures, and expressive typography extend the brand across packaging, signage, menus, and social touchpoints,
           creating an atmosphere that feels light, comforting, and quietly memorable.`,
-    year: 2025,
+    year: 2024,
     deliverables: ["Interior Design", "3D Renders"],
   },
 
@@ -54,7 +54,7 @@ const works = [
     id: "babi",
     label: "Bahjat Al Afkar",
     path: "/works/babi",
-    title: "Bahjat Al Afkar - Visual Identity & Branding",
+    title: "Bahjat Al Afkar",
     overview: `Noor Studio is a Muscat-based skincare brand built around natural Omani ingredients — frankincense, rose water, 
         and black seed oil. The visual identity needed to communicate purity and provenance without defaulting to generic wellness aesthetics. 
         A monogram mark, hand-drawn botanical illustrations, and a restrained ivory and gold palette 
