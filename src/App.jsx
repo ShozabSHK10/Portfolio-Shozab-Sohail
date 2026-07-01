@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import ScrollToTop from "./hooks/scrollToTop.jsx";
 import Home from "./pages/Home.jsx";
 import WorkDetails from "./pages/WorkDetails.jsx";
 import Preloader from "./animations/Preloader.jsx";
@@ -12,7 +11,6 @@ function App() {
     <>
       <Preloader onComplete={() => setPreloaderDone(true)} />
       <div style={{ visibility: preloaderDone ? "visible" : "hidden" }}></div>
-      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home preloaderDone={preloaderDone} />} />
         <Route path="/works/:id" element={<WorkDetails />} />

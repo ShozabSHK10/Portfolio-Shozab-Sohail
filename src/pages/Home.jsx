@@ -10,7 +10,7 @@ function Home( { preloaderDone } ) {
   return (
     <>
       <NavBar preloaderDone={preloaderDone} />
-      <Hero />
+      <Hero preloaderDone={preloaderDone}/>
       <About />
       <Works />
       <Services />

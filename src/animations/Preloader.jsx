@@ -3,10 +3,9 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import "./Preloader.css";
 
-const NUM_LINES = 10;
-
-export default function Preloader({ onComplete }) {
+function Preloader({ onComplete }) {
   const wrapperRef = useRef(null);
+  const NUM_LINES = 10;
 
   useGSAP(
   () => {
@@ -19,7 +18,7 @@ export default function Preloader({ onComplete }) {
 
     // 1. count up
     tl.to(obj, {
-      val: 99,
+      val: 100,
       duration: 2.2,
       ease: "power2.inOut",
       onUpdate() {
@@ -75,3 +74,5 @@ export default function Preloader({ onComplete }) {
     </div>
   );
 }
+
+export default Preloader;
