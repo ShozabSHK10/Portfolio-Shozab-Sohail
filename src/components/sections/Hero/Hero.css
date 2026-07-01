@@ -68,5 +68,9 @@
    .hero-content{
       margin: auto 0;
    }
+
+   .my-name{
+    line-height: 1;
+   }
 }
 

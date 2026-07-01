@@ -47,7 +47,7 @@ function NavBar({ preloaderDone }) {
         )
         .from(".navbar-hamburger", { x: 40, opacity: 0 }, "0");
     },
-    { scope: navRef }, // build once on mount, no dependency on preloaderDone
+    { scope: navRef }, 
   );
 
   useEffect(() => {

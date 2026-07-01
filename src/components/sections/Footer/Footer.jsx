@@ -1,11 +1,16 @@
 import "./Footer.css";
 import logo from "/logo/SHK.svg";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import useLiveTime from "../../../hooks/useLiveTime.js";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Footer() {
   const { time, date } = useLiveTime();
-
+  const footerRef = useRef(null);
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
@@ -14,8 +19,40 @@ function Footer() {
     setTimeout(() => setCopied(false), 1000);
   };
 
+  useGSAP(
+    () => {
+      gsap.from([".footer-left", ".footer-right"], {
+        opacity: 0,
+        y: -40,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: footerRef.current,
+          start: "top bottom",
+          toggleActions: "play none none none",
+          once: true,
+        },
+      });
+
+      gsap.from(".footer-bottom", {
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: footerRef.current,
+          start: "top bottom",
+          toggleActions: "play none none none",
+          once: true,
+        },
+      });
+    },
+    { scope: footerRef },
+  );
+
   return (
-    <footer className="footer">
+    <footer className="footer" ref={footerRef}>
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-left">
@@ -59,7 +96,7 @@ function Footer() {
               About <span className="nav-arrow">→</span>
             </a>
             <a className="nav" href="#works">
-              Work <span className="nav-arrow">→</span>
+              Works <span className="nav-arrow">→</span>
             </a>
             <a
               className="nav"

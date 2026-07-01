@@ -14,12 +14,27 @@
     display: flex;
     justify-content: center;
     flex-shrink: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
 }
 
 .workImage img {
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
+}
+
+.workImage img.hoverImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: auto;
+    border-radius: 0.5rem;
+    opacity: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
 }
 
 .workInfo {
