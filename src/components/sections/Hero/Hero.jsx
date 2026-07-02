@@ -34,7 +34,7 @@ function Hero({ preloaderDone }) {
       );
 
       tlRef.current.from(
-        ".hero-name",
+        ".hero-role",
         {
           y: 40,
           opacity: 0,
@@ -68,8 +68,8 @@ function Hero({ preloaderDone }) {
         </div>
       </div>
 
-      <div className="hero-name" ref={containerRef}>
-        <span className="fit-text my-name">DESIGN ENGINEER</span>
+      <div className="hero-role" ref={containerRef}>
+        <span className="fit-text my-role">DESIGN ENGINEER</span>
       </div>
     </section>
   );

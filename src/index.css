@@ -26,6 +26,13 @@ html, body {
   height: 100%;
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;    
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;              
 }
 

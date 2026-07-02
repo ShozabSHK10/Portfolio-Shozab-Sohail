@@ -3,7 +3,7 @@
     flex-direction: column;
     position: sticky;
     background: #262626;
-    padding: 5rem 3rem;
+    padding: 5rem 2rem;
     gap: clamp(2rem, 3vw, 5rem);
     z-index: 2;
 }

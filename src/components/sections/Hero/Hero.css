@@ -4,7 +4,8 @@
   justify-content: flex-end;
   position: sticky;
   top: 0;
-  height: calc(100vh - 56px);
+  /* height: 100vh; */
+  height: 100svh;
   padding: 0rem 2rem 1rem;
   background: #111111;
   gap: 8rem;
@@ -40,15 +41,14 @@
   justify-content: center;
 }
 
-.hero-name{
-  overflow: hidden; 
-  text-align: center; 
-
+.hero-role{
+  /* overflow: hidden;  */
 }
 
-.my-name {
+.my-role {
   display: block;
   font-family: "Pavot-Bold";
+  text-align: center;
   white-space: nowrap;
   background: #969696;
   -webkit-background-clip: text;
