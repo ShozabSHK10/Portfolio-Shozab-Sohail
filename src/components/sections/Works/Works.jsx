@@ -3,8 +3,7 @@ import "./Works.css";
 import WorkCard from "./WorkCard.jsx";
 import works from "../../../data/works.js";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "../../../animations/gsap";
 import Button from "../../button/Button.jsx";
 import imageBA from "../../../assets/projectImages/imagesBA/imgOneBA.png";
 import imageSDS from "../../../assets/projectImages/imagesSDS/imgTenSDS.png";
@@ -39,7 +38,6 @@ function Works() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 80%",
         },
       });
 
@@ -51,7 +49,6 @@ function Works() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".works-content",
-          start: "top 85%",
         },
       });
     },

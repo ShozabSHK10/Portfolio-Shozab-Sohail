@@ -2,13 +2,10 @@ import { useRef } from "react";
 import "./Services.css";
 import ServiceCard from "./ServiceCard.jsx";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "../../../animations/gsap";
 import imageOne from "../../../assets/servicesImages/one.jpg";
 import imageTwo from "../../../assets/servicesImages/two.jpg";
 import imageThree from "../../../assets/servicesImages/three.jpg";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
@@ -58,7 +55,6 @@ function Services() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: servicesRef.current,
-          start: "top 80%",
         },
       });
     },

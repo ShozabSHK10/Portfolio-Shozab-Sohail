@@ -3,7 +3,7 @@ import "./WorkCard.css";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+import { gsap } from "../../../animations/gsap";
 
 function WorkCard({ path, image, hoverImage, logo, name, type, year }) {
   const imgRef = useRef(null);

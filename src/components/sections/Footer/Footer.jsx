@@ -2,11 +2,9 @@ import "./Footer.css";
 import logo from "/logo/SHK.svg";
 import { useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "../../../animations/gsap";
 import useLiveTime from "../../../hooks/useLiveTime.js";
 
-gsap.registerPlugin(ScrollTrigger);
 
 function Footer() {
   const { time, date } = useLiveTime();
@@ -29,7 +27,6 @@ function Footer() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: footerRef.current,
-          start: "top bottom",
           toggleActions: "play none none none",
           once: true,
         },
@@ -42,7 +39,6 @@ function Footer() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: footerRef.current,
-          start: "top bottom",
           toggleActions: "play none none none",
           once: true,
         },

@@ -1,11 +1,9 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "../../../animations/gsap";
 import "./About.css";
 import image from "../../../assets/projectImages/imagesSDS/imgNineSDS.jpg";
 
-gsap.registerPlugin(ScrollTrigger);
 
 function About() {
   const sectionRef = useRef(null);
@@ -18,7 +16,6 @@ function About() {
         ease: "power4.out",
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 75%",
         },
       });
 
@@ -30,7 +27,6 @@ function About() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".about-description",
-          start: "top 80%",
         },
       });
 
@@ -41,7 +37,6 @@ function About() {
         ease: "power4.out",
         scrollTrigger: {
           trigger: ".about-image",
-          start: "top 80%",
         },
       });
 
@@ -58,7 +53,6 @@ function About() {
             snap: { textContent: 1 },
             scrollTrigger: {
               trigger: el,
-              start: "top 85%",
             },            
           }
         );

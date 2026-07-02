@@ -2,10 +2,7 @@ import { useRef } from "react";
 import "./ServiceCard.css";
 import PropTypes from "prop-types";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { gsap, ScrollTrigger } from "../../../animations/gsap";
 
 function ServiceCard({ number, title, subtitle, image, description }) {
   const cardRef = useRef(null);
@@ -15,7 +12,6 @@ function ServiceCard({ number, title, subtitle, image, description }) {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: cardRef.current,
-          start: "top 85%",
         },
       });
 
@@ -34,7 +30,6 @@ function ServiceCard({ number, title, subtitle, image, description }) {
           ease: "power3.out",
           scrollTrigger: {
             trigger: cardRef.current,
-            start: "top 85%",
           },
         },
       );
