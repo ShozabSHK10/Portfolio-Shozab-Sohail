@@ -3,6 +3,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: fit-content;
   overflow: hidden;
   padding: 0.75rem;
   border-radius: 1.25rem;

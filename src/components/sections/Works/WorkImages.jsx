@@ -7,14 +7,12 @@ import ImagesBA from "../../imagesJSX/imagesBA.jsx";
 import ImagesSDS from "../../imagesJSX/imagesSDS.jsx";
 import ImagesPF from "../../imagesJSX/imagesPF.jsx";
 import ImagesHM from "../../imagesJSX/imagesHM.jsx";
-import ImagesBABI from "../../imagesJSX/imagesBABI.jsx";
 
 const imageComponents = {
   ba: <ImagesBA />,
   sds: <ImagesSDS />,
   pf: <ImagesPF />,
   hm: <ImagesHM />,
-  babi: <ImagesBABI />,
 };
 
 function WorkImages() {
@@ -40,17 +38,23 @@ function WorkImages() {
         <div className="work-images">
           {imageComponents[id] ?? (
             <div className="image-placeholder-layout">
-              <div className="img-full placeholder" />
+              
+              <div className="img-fullPlaceholder" />
+              
               <div className="img-pair">
                 <div className="placeholder" />
                 <div className="placeholder" />
               </div>
-              <div className="img-full placeholder" />
+
+              <div className="img-fullPlaceholder" />
+              
               <div className="img-pair">
                 <div className="placeholder" />
                 <div className="placeholder" />
               </div>
+              
             </div>
+            
           )}
         </div>
       </section>

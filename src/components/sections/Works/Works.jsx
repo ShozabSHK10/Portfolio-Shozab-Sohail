@@ -5,24 +5,25 @@ import works from "../../../data/works.js";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Button from "../../button/Button.jsx";
 import imageBA from "../../../assets/projectImages/imagesBA/imgOneBA.png";
-import imageSDS from "../../../assets/projectImages/imagesSDS/imgOneSDS.jpg";
+import imageSDS from "../../../assets/projectImages/imagesSDS/imgTenSDS.png";
 import imageHM from "../../../assets/projectImages/imagesHM/imgOneHM.png";
-import imageBABI from "../../../assets/projectImages/imagesBABI/imgOneBABI.jpg";
+import imagePF from "../../../assets/projectImages/imagesPF/imgOnePF.png";
 import logoOne from "../../../assets/clientLogos/bhjfLogo.svg";
 import logoTwo from "../../../assets/clientLogos/sihrLogo.svg";
-import hoverImageBA from "../../../assets/projectImages/imagesBA/imgTwoBA.png";
-import hoverImageSDS from "../../../assets/projectImages/imagesSDS/imgFiveSDS.jpg";
+import logoThree from "../../../assets/clientLogos/hmLogo.svg";
+import logoFour from "../../../assets/clientLogos/pfLogo.svg";
+import hoverImageBA from "../../../assets/projectImages/imagesBA/imgSixBA.jpg";
+import hoverImageSDS from "../../../assets/projectImages/imagesSDS/imgOneSDS.jpg";
 import hoverImageHM from "../../../assets/projectImages/imagesHM/imgTwoHM.png";
-import hoverImageBABI from "../../../assets/projectImages/imagesBABI/imgFourBABI.jpg";
-
-gsap.registerPlugin(ScrollTrigger);
+import hoverImagePF from "../../../assets/projectImages/imagesPF/imgTwoPF.png";
 
 const assetsById = {
   ba: { image: imageBA, logo: logoOne, hoverImage: hoverImageBA },
   sds: { image: imageSDS, logo: logoTwo, hoverImage: hoverImageSDS },
-  hm: { image: imageHM, logo: logoOne, hoverImage: hoverImageHM },
-  babi: { image: imageBABI, logo: logoOne, hoverImage: hoverImageBABI },
+  hm: { image: imageHM, logo: logoThree, hoverImage: hoverImageHM },
+  pf: { image: imagePF, logo: logoFour, hoverImage: hoverImagePF },
 };
 
 function Works() {
@@ -61,7 +62,7 @@ function Works() {
     <section className="works" id="works" ref={sectionRef}>
       <div className="works-header">
         <span>WORKS</span>
-        <span>'26</span>
+        <span>(4)</span>
       </div>
       <div className="works-content">
         {works
@@ -78,6 +79,9 @@ function Works() {
               logo={assetsById[w.id].logo}
             />
           ))}
+      </div>
+      <div className="works-button">
+        <Button text="All projects (coming soon)" />
       </div>
     </section>
   );

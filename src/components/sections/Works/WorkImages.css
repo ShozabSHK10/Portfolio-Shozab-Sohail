@@ -20,13 +20,22 @@
   flex-direction: column;
   width: 100%;
   gap: 1rem;
+  overflow: hidden;
 }
 
 .img-full {
   width: 100%;
   border-radius: 0.75rem;
   object-fit: contain;
+  object-position: center;
   display: block;
+}
+
+.img-fullPlaceholder {
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 0.75rem;
 }
 
 .img-pair {
@@ -45,7 +54,6 @@
 }
 
 .placeholder {
-  background-color: #969696;
   width: 100%;
 }
 

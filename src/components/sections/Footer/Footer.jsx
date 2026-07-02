@@ -61,20 +61,20 @@ function Footer() {
             </a>
             <div className="socialLinks">
               <a
-                href="https://www.linkedin.com/in/shozab-sohail5/"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-text="LinkedIn"
-              >
-                <span>LinkedIn</span>
-              </a>
-              <a
                 href="https://github.com/ShozabSHK10"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-text="GitHub"
               >
                 <span>GitHub</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/shozab-sohail5/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-text="LinkedIn"
+              >
+                <span>LinkedIn</span>
               </a>
               <a
                 href="https://www.behance.net/shozabshk"

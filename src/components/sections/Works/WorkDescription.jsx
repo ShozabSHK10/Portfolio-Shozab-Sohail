@@ -6,32 +6,41 @@ function WorkDescription({
   client,
   year,
   deliverables,
-  role,
+  visitLink,
 }) {
   return (
     <div className="card-container">
       <div className="card-title">{title}</div>
 
       <div className="card-description">
-        <div className="work-info">
-
-          <div className="info-groups info-year">
-            <span className="work-year">YEAR</span>
-            <p className="year-value">{year}</p>
-          </div>
-
-          <div className="info-groups info-deliverables">
-            <span className="deliverables-label">DELIVERABLES</span>
-            {deliverables.map((d, i) => (
-              <p key={i} className="deliverable-item">
-                {d}
-              </p>
-            ))}
-          </div>
-
+        <div className="info-groups info-year">
+          <span className="work-year">YEAR</span>
+          <p className="year-value">{year}</p>
         </div>
 
-        <div className="overview-text">{overview}</div>
+        <div className="info-groups info-deliverables">
+          <span className="deliverables-label">DELIVERABLES</span>
+          {deliverables.map((d, i) => (
+            <p key={i} className="deliverable-item">
+              {d}
+            </p>
+          ))}
+        </div>
+
+        <div className="overview-text">
+          <span className="overview-label">SUMMARY</span>
+          <p>{overview}</p>
+          {visitLink && (
+            <a
+              href={visitLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="visit-link"
+            >
+              Visit Site →
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
