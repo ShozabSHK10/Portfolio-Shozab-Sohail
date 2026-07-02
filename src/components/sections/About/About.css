@@ -4,7 +4,7 @@
     position: sticky;
     background: #262626;
     padding: 5rem 2rem;
-    gap: clamp(2rem, 3vw, 5rem);
+    gap: clamp(1.5rem, 3vw, 5rem);
     z-index: 2;
 }
 
@@ -36,21 +36,21 @@
 
 .about-stats {
     display: flex;
+    justify-content: center;
     gap: clamp(1.5rem, 3vw, 3rem);
-    margin-top: 1rem;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     border-top: 1px solid #3f3f3f;
 }
 
 .stat {
     display: flex;
     flex-direction: column;
-    gap: clamp(0.5rem, 1vw, 1rem);
+    gap: 1rem;
 }
 
 .stat-number {
     text-align: center;
-    font-size: clamp(3rem, 5vw, 5rem);
+    font-size: clamp(2rem, 5vw, 5rem);
     font-weight: 500;
     color: #ffffff;
     line-height: 1;

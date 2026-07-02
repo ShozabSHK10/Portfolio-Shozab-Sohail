@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   font-family: "Pavot-Bold";
-  padding: 0rem 1rem;
+  padding: 0rem 0.5rem;
   font-size: clamp(4rem, 12vw, 15rem);
   color: #ffffff;
   line-height: 0.8;
@@ -39,6 +39,7 @@
 @media (max-width: 900px) {
   .works {
     padding: 7rem 1rem;
+    gap: 1.5rem;
   }
 
   .works-content {
