@@ -91,15 +91,15 @@
   background: #111111;
   z-index: 999;
   transition:
-    max-height 0.35s ease,
-    opacity 0.35s ease,
-    padding 0.35s ease;
+    max-height 1s ease-out,
+    opacity 0.35s ease-out,
+    padding 1s ease-out;
 }
 
 .navbar-drawer.drawer-open {
   max-height: 100dvh;
   height: 100dvh;
-  padding: 12rem 1rem 1rem;
+  padding: 12rem 1rem 1.5rem;
   opacity: 1;
   justify-content: space-between;
 }
@@ -154,14 +154,14 @@
 
   .navbar-hamburger {
     display: flex;
-    padding: 0.7rem 0.5rem;
+    padding: 0.5rem 0.7rem;
     font-family: "Inter";
     font-weight: 500;
-    font-size: clamp(1.5rem, 1.75vw, 1.75rem);
-    border: 1px solid #111111;
-    border-radius: 1rem;
-    background: #969696;
-    color: #171717;
+    font-size: 1.75rem;
+    border: 1.5px solid #111111;
+    border-radius: 0.5rem;
+    background: #262626;
+    color: #969696;
     letter-spacing: -0.02em;
     line-height: 0.7;
   }

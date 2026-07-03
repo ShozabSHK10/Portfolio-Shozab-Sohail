@@ -9,7 +9,6 @@ function About() {
   const sectionRef = useRef(null);
 
   useGSAP(() => {
-    const ctx = gsap.context(() => {
       gsap.from(".about-header", {
         y: -30,
         duration: 1.2,
@@ -39,10 +38,19 @@ function About() {
         },
       });
 
-    }, sectionRef);
+      gsap.from(".about-stats .stat", {
+        opacity: 0,
+        y: 30,
+        duration: 0.9,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".about-stats",
+        },
+      });
+    }, 
+    { scope: sectionRef}
+  );
 
-    return () => ctx.revert();
-  }, []);
 
   return (
     <section className="about" id="about" ref={sectionRef}>
