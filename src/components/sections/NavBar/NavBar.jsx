@@ -40,7 +40,7 @@ function NavBar({ preloaderDone }) {
 
       tlRef.current
         .from(".navbar-left", { x: -40, opacity: 0 }, "0")
-        .from(".nav-link", { y: -40, opacity: 0, stagger: 0.1, clearProps: "all" }, "0",)
+        .from(".nav-link", { y: -40, opacity: 0, clearProps: "all" }, "0",)
         .from(".navbar-hamburger", { x: 40, opacity: 0 }, "0");
     },
     { scope: navRef }, 
@@ -83,7 +83,7 @@ function NavBar({ preloaderDone }) {
             onClick={() => toggleMenu()}
             aria-label="Toggle menu"
           >
-            {menuOpen ? "CLOSE" : "MENU"}
+            {menuOpen ? "Close" : "Menu"}
           </button>
         </div>
       </nav>

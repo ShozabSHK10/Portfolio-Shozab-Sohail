@@ -5,7 +5,6 @@ import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "../../../animations/gsap";
 import useLiveTime from "../../../hooks/useLiveTime.js";
 
-
 function Footer() {
   const { time, date } = useLiveTime();
   const footerRef = useRef(null);
@@ -23,24 +22,9 @@ function Footer() {
         opacity: 0,
         y: -40,
         duration: 0.8,
-        stagger: 0.15,
         ease: "power3.out",
         scrollTrigger: {
           trigger: footerRef.current,
-          toggleActions: "play none none none",
-          once: true,
-        },
-      });
-
-      gsap.from(".footer-bottom", {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: footerRef.current,
-          toggleActions: "play none none none",
-          once: true,
         },
       });
     },

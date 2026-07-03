@@ -23,7 +23,6 @@ function About() {
         opacity: 0,
         y: 30,
         duration: 0.9,
-        stagger: 0.15,
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".about-description",
@@ -40,23 +39,6 @@ function About() {
         },
       });
 
-      // stat counters
-      gsap.utils.toArray(".stat-number").forEach((el) => {
-        const target = +el.dataset.value;
-        gsap.fromTo(
-          el,
-          { textContent: 0 },
-          {
-            textContent: target,
-            duration: 1,
-            ease: "power1.out",
-            snap: { textContent: 1 },
-            scrollTrigger: {
-              trigger: el,
-            },            
-          }
-        );
-      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -84,14 +66,14 @@ function About() {
             <div className="about-stats">
               <div className="stat">
                 <p>Years Experience</p>
-                <span className="stat-number" data-value="3">
-                  0
+                <span className="stat-number">
+                  3
                 </span>
               </div>
               <div className="stat">
                 <p>Projects Shipped</p>
-                <span className="stat-number" data-value="6">
-                  0
+                <span className="stat-number">
+                  6
                 </span>
               </div>
             </div>
