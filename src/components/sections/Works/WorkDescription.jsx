@@ -20,11 +20,17 @@ function WorkDescription({
 
         <div className="info-groups info-deliverables">
           <span className="deliverables-label">DELIVERABLES</span>
+          <div className="deliverables-list">
           {deliverables.map((d, i) => (
-            <p key={i} className="deliverable-item">
+            <p
+              key={i}
+              className={`deliverable-item deliverable-item-${i}`}
+              data-index={i}
+            >
               {d}
             </p>
           ))}
+          </div>
         </div>
 
         <div className="overview-text">

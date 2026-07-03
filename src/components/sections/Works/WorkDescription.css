@@ -19,6 +19,48 @@
   gap: 2rem;
 }
 
+.info-groups.info-year {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-groups span {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  color: #969696;
+}
+
+.info-groups.info-deliverables {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.deliverables-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.deliverable-item {
+  background: #262626;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-size: clamp(0.75rem, 1vw, 1rem);
+  color: #ffffff;
+  width: fit-content;
+  white-space: nowrap;
+  gap: 0.5rem;
+}
+
+.info-groups .year-value {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  color: #ffffff;
+  line-height: 1;
+}
+
 .overview-text {
   display: flex;
   flex-direction: column;
@@ -37,40 +79,6 @@
   line-height: 1.5;
 }
 
-.info-groups.info-year{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.info-groups span {
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
-  color: #969696; 
-}
-
-.info-groups.info-deliverables {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.deliverable-item {
-  background: #262626;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  font-size: clamp(0.75rem, 1vw, 1rem);
-  color: #ffffff; 
-  width: fit-content;
-  white-space: nowrap;
-  gap: 0.5rem;
-}
-
-.info-groups .year-value {
-  font-size: clamp(1.5rem, 3vw, 3rem);
-  color: #ffffff;
-  line-height: 1;
-}
-
 .visit-link {
   text-decoration: none;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
@@ -86,14 +94,13 @@
   color: #ffffff;
 }
 
-
 @media (max-width: 900px) {
   .card-description {
-    flex-direction: column; 
+    flex-direction: column;
     gap: clamp(1.5rem, 3vh, 3rem);
   }
-  
+
   .work-info div {
-    text-align: left; 
+    text-align: left;
   }
 }

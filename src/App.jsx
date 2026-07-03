@@ -1,21 +1,23 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import WorkDetails from "./pages/WorkDetails.jsx";
 import Preloader from "./animations/Preloader.jsx";
+import ScrollToTop from "./hooks/ScrollToTop.jsx";
 
 function App() {
   const [preloaderDone, setPreloaderDone] = useState(false);
 
   return (
-    <>
+      <BrowserRouter>
+      <ScrollToTop/>
       <Preloader onComplete={() => setPreloaderDone(true)} />
       <div style={{ visibility: preloaderDone ? "visible" : "hidden" }}></div>
       <Routes>
         <Route path="/" element={<Home preloaderDone={preloaderDone} />} />
         <Route path="/works/:id" element={<WorkDetails />} />
       </Routes>
-    </>
+      </BrowserRouter>
   );
 }
 

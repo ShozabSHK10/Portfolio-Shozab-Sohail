@@ -33,7 +33,7 @@ function WorkImages() {
           </a>
         </section>
 
-      <section className="work-imagesContainer">
+      <section className="work-imagesContainer" key={id}>
         <WorkDescription {...work} />
         <div className="work-images">
           {imageComponents[id] ?? (
@@ -62,7 +62,7 @@ function WorkImages() {
       {nextWork && (
         <section className="bottom-navigation">
           <a onClick={() => navigate(nextWork.path)} className="next-project">
-            Next Project <span>→</span>
+            Next work <span>→</span>
           </a>
         </section>
       )}
