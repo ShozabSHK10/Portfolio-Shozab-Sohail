@@ -3,7 +3,7 @@
   flex-direction: column;
   background: #262626;
   padding: 3rem 2rem 0rem;
-  gap: clamp(2rem, 3vw, 3rem);
+  gap: 3rem;
 }
 
 .work-imagesContainer{

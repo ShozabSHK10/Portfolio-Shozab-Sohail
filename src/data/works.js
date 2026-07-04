@@ -4,15 +4,19 @@ const works = [
     label: "Bahjat Al Afkar",
     path: "/works/ba",
     title: "Bahjat Al Afkar",
-    overview: `Bahjat Al Afkar is a Muscat-based company specializing in interior fitouts, steel fabrication, and signage. 
-    I designed and built their site from the ground up to reflect the precision and craftsmanship of their work - clean structure, confident typography, 
-    and motion that feels deliberate rather than decorative.`,
+    overview: `Bahjat Al Afkar builds interior fitouts, steel fabrication, and signage across Muscat - work that lives or dies on precision. 
+    The core pain point going in was translating that precision into a digital experience without it feeling cold or corporate. 
+    I focused on information hierarchy, confident typography, and purposeful micro-interactions - motion that reinforces user flow 
+    rather than existing for its own sake.`,
     year: 2025,
     deliverables: [
       "Product",
       "UI/UX Design",
       "Web Development",
       "Brand & Visual Identity",
+      "Responsive Design",
+      "gsap animations",
+      "SEO optimization",
     ],
     visitLink: "https://bahjatalafkar.com",
   },
@@ -22,14 +26,17 @@ const works = [
     label: "Sihr Design Studio",
     path: "/works/sds",
     title: "Sihr Design Studio",
-    overview: `Sihr Design Studio is an architectural practice working across interior design, space planning, and architectural drawing. 
-    At the heart of their philosophy is a simple belief: the spaces people live and work in should feel intentional, not accidental.
-    This identity was built to reflect that same intentionality - quiet, considered, and grounded in material honesty.`,
+    overview: `Sihr Design Studio works across interior design, space planning, and architectural drawing, built on a simple belief: 
+    the spaces people live and work in should feel intentional, not accidental. They needed a temporary site to showcase their portfolio 
+    while the full build is underway - so the challenge was making something that felt complete, not like a placeholder. I focused on 
+    visual hierarchy and pacing, letting whitespace do as much work as the content itself, with interactions that stay quiet and considered 
+    rather than competing for attention.`,
     year: 2026,
     deliverables: [
       "Portfolio",
       "UI/UX Design",
       "Web Development",
+      "Responsive Design",
       "Visual Identity",
       "Logo Design",
     ],
@@ -41,11 +48,12 @@ const works = [
     label: "Haffaf Muscat",
     path: "/works/hm",
     title: "Haffaf Muscat",
-    overview: `Haffaf Muscat needed a digital presence that could support their email marketing efforts with clarity and polish. 
-    I designed and built the site with a focus on clean UI/UX and a structure that translates naturally into their outbound campaigns -
-    keeping the visual language consistent from first impression to inbox.`,
+    overview: `Haffaf Muscat needed a digital presence built to support their email marketing - the challenge was consistency, 
+    making sure the visual language held up from a first-time visitor's landing on the site all the way through to opening a campaign email. 
+    I focused on a component-driven UI system - reusable patterns, a consistent type scale, and layout choices that could scale cleanly 
+    across both the website and outbound templates.`,
     year: 2026,
-    deliverables: ["UI/UX Design", "Web development"],
+    deliverables: ["UI/UX Design", "Web development", "Responsive Design", "SEO optimization",],
     visitLink: "https://framer.com/projects/Haffaf-Muscat-Email-Marketing--1S20UEjRpwT4pF4w4Gyo-88uRd",
   },
 
@@ -54,11 +62,12 @@ const works = [
     label: "PlayPal Football",
     path: "/works/pf",
     title: "PlayPal Football",
-    overview: `PlayPal Football is a platform built for players looking to organize and join casual football matches with ease. 
-    I designed the UI/UX and helped bring the app to life - focusing on a fast, intuitive flow that gets people 
-    from "let's play" to on the pitch with as little friction as possible.`,
+    overview: `PlayPal Football is a platform for organizing and joining casual football matches - my final year project, where I owned the full process 
+    end-to-end, from UX research and interaction design through to development. The core problem was friction: every extra step between 
+    "let's play" and being on the pitch is a drop-off point. I designed the flow around that constraint - minimal input, clear affordances, 
+    and a UI that gets out of the user's way - then built it out myself to make sure that intent actually held up in the shipped product.`,
     year: 2024,
-    deliverables: ["Product", "UI/UX Design", "App Development"],
+    deliverables: ["Final Year Project", "Product", "UI/UX Design", "App Development"],
   },
 ];
 

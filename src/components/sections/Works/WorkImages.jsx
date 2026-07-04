@@ -29,7 +29,7 @@ function WorkImages() {
       
         <section className="upper-navigation">
           <a onClick={() => navigate("/")} className="back-toHome">
-            <span>←</span> Back To Home 
+            <span>←</span>Back To Home 
           </a>
         </section>
 
@@ -62,7 +62,7 @@ function WorkImages() {
       {nextWork && (
         <section className="bottom-navigation">
           <a onClick={() => navigate(nextWork.path)} className="next-project">
-            Next work <span>→</span>
+            Next work<span>→</span>
           </a>
         </section>
       )}
