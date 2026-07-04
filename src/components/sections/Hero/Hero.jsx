@@ -2,14 +2,17 @@ import "./Hero.css";
 import Button from "../../button/Button.jsx";
 import image from "/logo/GLOBE.svg";
 import useFitText from "../../../hooks/useFitText.js";
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "../../../animations/gsap";
+
+const EMAIL = "shozabshk5@gmail.com";
 
 function Hero({ preloaderDone }) {
   const containerRef = useRef(null);
   const heroRef = useRef(null);
   const tlRef = useRef(null);
+  const [copied, setCopied] = useState(false);
 
   useFitText(containerRef);
 
@@ -47,11 +50,25 @@ function Hero({ preloaderDone }) {
     { scope: heroRef },
   );
 
+  //preloader
+
   useEffect(() => {
     if (preloaderDone) {
       tlRef.current?.play();
     }
   }, [preloaderDone]);
+
+  //my email copy logic
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy email:", err);
+    }
+  };
 
   return (
     <section className="hero" id="hero" ref={heroRef}>
@@ -64,7 +81,10 @@ function Hero({ preloaderDone }) {
           <br />
         </div>
         <div className="hero-button">
-          <Button text="Work with me" />
+          <Button text="Work with me" onClick={handleCopyEmail} />
+          <span className={`hero-copied-hint ${copied ? "show" : ""}`}>
+            Email copied!
+          </span>
         </div>
       </div>
 
