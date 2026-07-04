@@ -44,11 +44,11 @@
 }
 
 .service-image img {
-    width: clamp(15rem, 25vw, 25rem);
-    height: clamp(10rem, 10vw, 15rem);    
+    aspect-ratio: 7/3;
+    width: clamp(15rem, 25vw, 25rem);  
     transition: opacity 1s ease;
+    object-fit: contain;
 }
-
 
 .service-description {
     display: flex;
