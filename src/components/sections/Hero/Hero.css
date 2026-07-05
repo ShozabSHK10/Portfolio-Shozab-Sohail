@@ -7,8 +7,26 @@
   height: 100svh;
   padding: 0rem 2rem 1rem;
   background: #111111;
+  background-image: url("../../../assets/bgImages/heroBG.png");
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
   gap: 8rem;
   z-index: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 6px 6px;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .hero-content {
