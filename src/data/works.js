@@ -2,7 +2,7 @@ const works = [
   {
     id: "ba",
     label: "Bahjat Al Afkar",
-    path: "/works/ba",
+    path: "/work/ba",
     title: "Bahjat Al Afkar",
     overview: `Bahjat Al Afkar builds interior fitouts, steel fabrication, and signage across Muscat - work that lives or dies on precision. 
     The core pain point going in was translating that precision into a digital experience without it feeling cold or corporate. 
@@ -24,7 +24,7 @@ const works = [
   {
     id: "sds",
     label: "Sihr Design Studio",
-    path: "/works/sds",
+    path: "/work/sds",
     title: "Sihr Design Studio",
     overview: `Sihr Design Studio works across interior design, space planning, and architectural drawing, built on a simple belief: 
     the spaces people live and work in should feel intentional, not accidental. They needed a temporary site to showcase their portfolio 
@@ -46,7 +46,7 @@ const works = [
   {
     id: "hm",
     label: "Haffaf Muscat",
-    path: "/works/hm",
+    path: "/work/hm",
     title: "Haffaf Muscat",
     overview: `Haffaf Muscat needed a digital presence built to support their email marketing - the challenge was consistency, 
     making sure the visual language held up from a first-time visitor's landing on the site all the way through to opening a campaign email. 
@@ -60,7 +60,7 @@ const works = [
   {
     id: "pf",
     label: "PlayPal Football",
-    path: "/works/pf",
+    path: "/work/pf",
     title: "PlayPal Football",
     overview: `PlayPal Football is a platform for organizing and joining casual football matches - my final year project, where I owned the full process 
     end-to-end, from UX research and interaction design through to development. The core problem was friction: every extra step between 

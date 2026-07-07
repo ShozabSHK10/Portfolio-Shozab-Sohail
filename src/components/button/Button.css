@@ -8,7 +8,7 @@
   padding: 0.75rem;
   border-radius: 1.25rem;
   background-color: #969696;
-  border: 1px solid #111111;
+  border: 1px solid #000000;
   text-decoration: none;
   color: #171717;
   font-size: 1.25rem;
@@ -35,7 +35,7 @@
 
 .button:hover {
   background-color: #111111;
-  border: 1px solid #e58d07;
+  border: 1px solid #969696;
 }
 
 .button:hover span {
@@ -44,6 +44,16 @@
 
 .button:hover::after {
   transform: translate(-50%, -50%);
+}
+
+.button-disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: auto; 
+}
+
+.button-disabled:hover {
+  cursor: not-allowed;
 }
 
 @media (max-width: 600px) {

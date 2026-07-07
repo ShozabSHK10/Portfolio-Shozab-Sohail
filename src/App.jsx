@@ -15,7 +15,7 @@ function App() {
       <div style={{ visibility: preloaderDone ? "visible" : "hidden" }}></div>
       <Routes>
         <Route path="/" element={<Home preloaderDone={preloaderDone} />} />
-        <Route path="/works/:id" element={<WorkDetails/>} />
+        <Route path="/work/:id" element={<WorkDetails/>} />
       </Routes>
       </BrowserRouter>
   );

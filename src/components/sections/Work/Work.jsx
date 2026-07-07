@@ -1,9 +1,9 @@
 import { useRef } from "react";
-import "./Works.css";
+import "./Work.css";
 import WorkCard from "./WorkCard.jsx";
-import works from "../../../data/works.js";
+import work from "../../../data/works.js";
 import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "../../../animations/gsap";
+import { gsap, ScrollTrigger } from "../../../animations/gsap.js";
 import Button from "../../button/Button.jsx";
 import imageBA from "../../../assets/projectImages/imagesBA/imgSixBA.jpg";
 import imageSDS from "../../../assets/projectImages/imagesSDS/imgOneSDS.jpg";
@@ -25,12 +25,12 @@ const assetsById = {
   pf: { image: imagePF, logo: logoFour, hoverImage: hoverImagePF },
 };
 
-function Works() {
+function Work() {
   const sectionRef = useRef(null);
 
   useGSAP(
     () => {
-      gsap.from(".works-header span", {
+      gsap.from(".work-header span", {
         y: 30,
         opacity: 0,
         duration: 0.8,
@@ -46,7 +46,7 @@ function Works() {
         duration: 1.5,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: ".works-content",
+          trigger: ".work-content",
         },
       });
     },
@@ -54,13 +54,13 @@ function Works() {
   );
 
   return (
-    <section className="works" id="works" ref={sectionRef}>
-      <div className="works-header">
-        <span>WORKS</span>
+    <section className="work" id="work" ref={sectionRef}>
+      <div className="work-header">
+        <span>SELECTED WORK</span>
         <span>(4)</span>
       </div>
-      <div className="works-content">
-        {works
+      <div className="work-content">
+        {work
           .filter((w) => assetsById[w.id])
           .map((w) => (
             <WorkCard
@@ -75,11 +75,11 @@ function Works() {
             />
           ))}
       </div>
-      <div className="works-button">
-        <Button text="All projects (coming soon)" />
+      <div className="work-button">
+        <Button text="All projects" disabled={true} />
       </div>
     </section>
   );
 }
 
-export default Works;
+export default Work;

@@ -54,9 +54,8 @@ function About() {
 
   return (
     <section className="about" id="about" ref={sectionRef}>
-        <div className="about-header">ABOUT ME</div>
-
         <div className="about-content">
+          <div className="about-header">MYSELF</div>
           <div className="about-description">
             <span>
               Frontend Engineer and UI/UX Designer with a focus on building
@@ -86,11 +85,13 @@ function About() {
               </div>
             </div>
           </div>
-
-          <div className="about-image">
-            <img src={image} alt="Myself" />
-          </div>
         </div>
+
+        
+        <div className="about-image">
+          <img src={image} alt="Myself" />
+        </div>
+
     </section>
   );
 }

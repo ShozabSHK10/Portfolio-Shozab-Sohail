@@ -17,13 +17,13 @@ function imagesBA() {
   return (
     <>
       <img className="img-full" src={img1} alt="BA" />
+      <img className="img-full" src={img2} alt="BA" />
       <div className="img-pair">
-        <img src={img2} alt="BA" />
-        <img src={img3} alt="BA" />
+        <img src={img4} alt="BA" />
+        <img src={img5} alt="BA" />
       </div>
       
-      <img className="img-full" src={img4} alt="BA" />
-      <img className="img-full" src={img5} alt="BA" />
+      <img className="img-full" src={img3} alt="BA" />
       <img className="img-full" src={img6} alt="BA" />
       
       <div className="img-pair">

@@ -1,7 +1,17 @@
 import "./Button.css";
 
-function Button({ text, link = "#", onClick }) {
+function Button({
+  text,
+  link = "#",
+  onClick,
+  disabled = false,
+}) {
   const handleClick = (e) => {
+    if (disabled) {
+      e.preventDefault();
+      return;
+    }
+
     if (onClick) {
       e.preventDefault();
       onClick(e);
@@ -9,7 +19,14 @@ function Button({ text, link = "#", onClick }) {
   };
 
   return (
-    <a href={link} className="button" data-text={text} onClick={handleClick}>
+    <a
+      href={disabled ? "#" : link}
+      className={`button ${disabled ? "button-disabled" : ""}`}
+      data-text={text}
+      onClick={handleClick}
+      aria-disabled={disabled}
+      title={disabled ? "Coming soon" : ""}
+    >
       <span>{text}</span>
     </a>
   );

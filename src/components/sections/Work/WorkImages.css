@@ -76,7 +76,7 @@
   color: #ffffff;
 }
 
-.next-project {
+.next-work {
   display: flex;
   align-items: center;
   color: #969696;
@@ -86,7 +86,7 @@
   transition: color 0.3s ease-in-out;
 }
 
-.next-project:hover {
+.next-work:hover {
   color: #ffffff;
 }
 

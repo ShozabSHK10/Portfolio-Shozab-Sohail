@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useParams } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import WorkImages from "../components/sections/Works/WorkImages.jsx";
+import WorkImages from "../components/sections/Work/WorkImages.jsx";
 import Footer from "../components/sections/Footer/Footer.jsx";
 
 function WorkDetails({ }) {

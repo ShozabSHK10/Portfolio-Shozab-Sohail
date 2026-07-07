@@ -63,8 +63,8 @@ function NavBar({ preloaderDone }) {
           <a href="#about" className="nav-link" data-text="About">
             <span>About</span>
           </a>
-          <a href="#works" className="nav-link" data-text="Works">
-            <span>Works</span>
+          <a href="#work" className="nav-link" data-text="Work">
+            <span>Work</span>
           </a>
           <a href="#services" className="nav-link" data-text="Services">
             <span>Services</span>
@@ -98,11 +98,11 @@ function NavBar({ preloaderDone }) {
             About
           </a>
           <a
-            href="#works"
+            href="#work"
             className="drawer-link"
             onClick={() => toggleMenu(false)}
           >
-            Works
+            Work
           </a>
           <a
             href="#services"
