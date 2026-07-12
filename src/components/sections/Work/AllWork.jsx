@@ -24,7 +24,7 @@ const assetsById = {
   pf: { image: imagePF, logo: logoFour, hoverImage: hoverImagePF },
 };
 
-function Work() {
+function AllWork() {
   const sectionRef = useRef(null);
 
   useGSAP(
@@ -67,4 +67,4 @@ function Work() {
   );
 }
 
-export default Work;
+export default AllWork;
