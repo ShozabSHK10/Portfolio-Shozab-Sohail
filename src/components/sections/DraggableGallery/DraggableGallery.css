@@ -46,7 +46,7 @@
     z-index: 0;
     pointer-events: none;
     color: #3f3f3f;
-    font-family: "Pavot-Regular";
+    font-family: "Pavot-Bold";
     font-size: clamp(5rem, 15vw, 15rem);
 }
 

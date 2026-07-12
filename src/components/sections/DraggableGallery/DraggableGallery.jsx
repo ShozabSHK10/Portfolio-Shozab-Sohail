@@ -114,7 +114,7 @@ function DraggableGallery() {
       </div>
       <div className="gallery-bgText">PLAYGROUND</div>
       <div className="gallery-scrollHint">
-        <p>Click + hold to explore</p>
+        <p>(Click + hold to explore)</p>
       </div>
 
       <motion.div

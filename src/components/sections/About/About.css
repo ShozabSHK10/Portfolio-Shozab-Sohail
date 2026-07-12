@@ -19,7 +19,7 @@
     font-family: "Pavot-Bold";
     letter-spacing: 0.03em;
     font-size: clamp(3rem, 8vw, 8rem);
-    color: #ffffff;
+    color: #969696;
     line-height: 0.8;
     gap: 1rem;
 }

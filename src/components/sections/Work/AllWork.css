@@ -11,8 +11,8 @@
   display: flex;
   justify-content: space-between;
   font-family: "Pavot-Bold";
-  font-size: clamp(3rem, 8vw, 8rem);
-  color: #ffffff;
+  font-size: clamp(3rem, 10vw, 10rem);
+  color: #969696;
   line-height: 0.8;
 }
 

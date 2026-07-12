@@ -20,7 +20,7 @@
 }
 
 .workImage img {
-    aspect-ratio: 16/9;
+    aspect-ratio: 14/9;
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
