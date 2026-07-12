@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "../../../animations/gsap.js";
 import Button from "../../button/Button.jsx";
 import imageBA from "../../../assets/projectImages/imagesBA/imgSixBA.jpg";
-import imageSDS from "../../../assets/projectImages/imagesSDS/imgOneSDS.jpg";
+import imageSDS from "../../../assets/projectImages/imagesSDS/imgOneSDS.png";
 import imageHM from "../../../assets/projectImages/imagesHM/imgOneHM.png";
 import imagePF from "../../../assets/projectImages/imagesPF/imgTwoPF.png";
 import logoOne from "../../../assets/clientLogos/bhjfLogo.svg";
