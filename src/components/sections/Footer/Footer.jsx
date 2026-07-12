@@ -1,6 +1,6 @@
 import "./Footer.css";
 import logo from "/logo/SHK.svg";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "../../../animations/gsap";
 import useLiveTime from "../../../hooks/useLiveTime.js";
@@ -8,6 +8,7 @@ import useLiveTime from "../../../hooks/useLiveTime.js";
 function Footer({preloaderDone}) {
   const { time, date } = useLiveTime();
   const footerRef = useRef(null);
+  const tlRef = useRef(null);
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
@@ -43,7 +44,7 @@ function Footer({preloaderDone}) {
         if (tlRef.current && tlRef.current.paused()) {
           tlRef.current.play();
         }
-      }, 3000); // adjust to your real preloader max duration
+      }, 3000); 
       return () => clearTimeout(fallback);
     }, []);
 
