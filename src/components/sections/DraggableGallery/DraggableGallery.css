@@ -47,7 +47,7 @@
     pointer-events: none;
     color: #3f3f3f;
     font-family: "Pavot-Regular";
-    font-size: 15rem;
+    font-size: clamp(5rem, 15vw, 15rem);
 }
 
 .gallery-scrollHint {
