@@ -73,6 +73,8 @@
 .about-image img {
     width: 100%;
     height: auto;
+    aspect-ratio: 14 / 9;
+    object-fit: cover;
 }
 
 @media (max-width: 900px) {

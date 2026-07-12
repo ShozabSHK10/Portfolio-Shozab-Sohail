@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "../../../animations/gsap";
 import "./About.css";
-import image from "../../../assets/projectImages/imagesSDS/imgNineSDS.jpg";
+import image from "../../../assets/projectImages/imagesSDS/imgNineSDS.png";
 
 
 function About() {
