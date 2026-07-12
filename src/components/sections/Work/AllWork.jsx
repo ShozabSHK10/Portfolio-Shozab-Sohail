@@ -1,10 +1,9 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import "./AllWork.css";
 import WorkCard from "./WorkCard.jsx";
 import work from "../../../data/works.js";
 import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "../../../animations/gsap.js";
-import Button from "../../button/Button.jsx";
+import { gsap } from "../../../animations/gsap.js";
 import imageBA from "../../../assets/projectImages/imagesBA/imgSixBA.jpg";
 import imageSDS from "../../../assets/projectImages/imagesSDS/imgOneSDS.png";
 import imageHM from "../../../assets/projectImages/imagesHM/imgOneHM.png";
@@ -25,29 +24,22 @@ const assetsById = {
   pf: { image: imagePF, logo: logoFour, hoverImage: hoverImagePF },
 };
 
-function Work({ preloaderDone }) {
+function Work() {
   const sectionRef = useRef(null);
-  const tlRef = useRef(null);
 
   useGSAP(
     () => {
-      tlRef.current = gsap.timeline({
-        defaults: { ease: "power3.out", duration: 0.8 },
-        paused: true,
-      });
-
-      tlRef.current
+      gsap
+        .timeline({ defaults: { ease: "power3.out", duration: 0.8 } })
         .from(".all-workHeader", { x: -40, opacity: 0 }, "0")
-        .from(".all-workContent", { y: -40, opacity: 0, clearProps: "all" }, "0")
+        .from(
+          ".all-workContent",
+          { y: -40, opacity: 0, clearProps: "all" },
+          "0",
+        );
     },
     { scope: sectionRef },
   );
-
-  useEffect(() => {
-    if (preloaderDone) {
-      tlRef.current?.play();
-    }
-  }, [preloaderDone]);
 
   return (
     <section className="allWork" id="allWork" ref={sectionRef}>

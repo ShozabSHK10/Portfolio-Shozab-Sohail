@@ -38,3 +38,9 @@
   font-size: 0.8em;
   color: #969696;
 }
+
+@media (max-width: 900px) {
+  .carousel {
+    padding: 0rem;
+  }
+}
