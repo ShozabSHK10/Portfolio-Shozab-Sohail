@@ -1,9 +1,9 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import "./SelectedWork.css";
 import WorkCard from "./WorkCard.jsx";
 import work from "../../../data/works.js";
 import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "../../../animations/gsap.js";
+import { gsap } from "../../../animations/gsap.js";
 import Button from "../../button/Button.jsx";
 import imageBA from "../../../assets/projectImages/imagesBA/imgSixBA.jpg";
 import imageSDS from "../../../assets/projectImages/imagesSDS/imgOneSDS.jpg";
@@ -25,43 +25,26 @@ const assetsById = {
   pf: { image: imagePF, logo: logoFour, hoverImage: hoverImagePF },
 };
 
-function SelectedWork({ preloaderDone }) {
+function SelectedWork() {
   const selectedWorkRef = useRef(null);
-  const tlRef = useRef(null);
 
   useGSAP(
-  () => {
-    const tl = gsap.timeline({
-      defaults: { ease: "power3.out", duration: 0.8 },
-      scrollTrigger: {
-        trigger: selectedWorkRef.current,
-      },
-    });
+    () => {
+      const tl = gsap.timeline({
+        defaults: { ease: "power3.out", duration: 0.8 },
+        scrollTrigger: {
+          trigger: selectedWorkRef.current,
+        },
+      });
 
-    tl.from(".work-header span", { y: 30, opacity: 0 }, "0")
-      .from(".work-content", { y: 40, opacity: 0, duration: 1.5 }, "0");
-  },
-  { scope: selectedWorkRef },
-);
-
-  //preloader
-
-  useEffect(() => {
-    if (preloaderDone) {
-      tlRef.current?.play();
-    }
-  }, [preloaderDone]);
-
-  // safety net: if preloaderDone never fires (race/prop issue), play on load anyway
-  useEffect(() => {
-    const fallback = setTimeout(() => {
-      if (tlRef.current && tlRef.current.paused()) {
-        tlRef.current.play();
-      }
-    }, 3000); // adjust to your real preloader max duration
-    return () => clearTimeout(fallback);
-  }, []);
-
+      tl.from(".work-header span", { y: 30, opacity: 0 }, "0").from(
+        ".work-content",
+        { y: 40, opacity: 0, duration: 1.5 },
+        "0",
+      );
+    },
+    { scope: selectedWorkRef },
+  );
 
   return (
     <section className="selectedWork" id="selectedWork" ref={selectedWorkRef}>

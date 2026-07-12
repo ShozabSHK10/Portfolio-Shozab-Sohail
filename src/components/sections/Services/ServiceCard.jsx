@@ -9,12 +9,6 @@ function ServiceCard({ number, title, subtitle, image, description }) {
 
   useGSAP(
     () => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: cardRef.current,
-        },
-      });
-
       gsap.from(
         [
           ".service-number",

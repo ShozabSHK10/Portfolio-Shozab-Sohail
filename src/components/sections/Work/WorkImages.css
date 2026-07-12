@@ -102,6 +102,7 @@
 @media (max-width: 900px) {
   .work-page {
     padding: 2rem 1rem 1rem;
+    gap: 2rem;
   }
 
   .work-imagesContainer{

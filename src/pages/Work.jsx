@@ -16,8 +16,8 @@ function Work({ preloaderDone }) {
   return (
       <>
       <NavBar preloaderDone={preloaderDone} />
-      <AllWork preloaderDone={preloaderDone}/>
-      <Footer preloaderDone={preloaderDone}/>
+      <AllWork />
+      <Footer />
       </>
   );
 }
