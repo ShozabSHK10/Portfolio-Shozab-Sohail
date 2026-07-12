@@ -3,6 +3,7 @@ import logo from "/logo/SHK.svg";
 import { useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "../../../animations/gsap";
+import { Link } from "react-router-dom";
 import useLiveTime from "../../../hooks/useLiveTime.js";
 
 function Footer() {
