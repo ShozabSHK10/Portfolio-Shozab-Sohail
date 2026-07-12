@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Work from "./pages/Work.jsx";
 import WorkDetails from "./pages/WorkDetails.jsx";
@@ -8,7 +8,13 @@ import Preloader from "./animations/Preloader.jsx";
 import { ScrollTrigger } from "./animations/gsap";
 
 function App() {
+  const location = useLocation();
   const [preloaderDone, setPreloaderDone] = useState(false);
+
+  // reset preloader on every route change
+  useEffect(() => {
+    setPreloaderDone(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     const refresh = () => ScrollTrigger.refresh();
@@ -22,17 +28,17 @@ function App() {
       window.removeEventListener("load", refresh);
       clearTimeout(safety);
     };
-  }, []);
+  }, [location.pathname]);
 
   return (
     <>
-      <Preloader onComplete={() => setPreloaderDone(true)} />
+      <Preloader key={location.pathname} onComplete={() => setPreloaderDone(true)} />
       <div style={{ visibility: preloaderDone ? "visible" : "hidden" }}></div>
       <Routes>
         <Route path="/" element={<Home preloaderDone={preloaderDone} />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/work/:id" element={<WorkDetails />} />
-        <Route path="/playground" element={<Playground />} />
+        <Route path="/work" element={<Work preloaderDone={preloaderDone} />} />
+        <Route path="/work/:id" element={<WorkDetails preloaderDone={preloaderDone} />} />
+        <Route path="/playground" element={<Playground preloaderDone={preloaderDone} />} />
       </Routes>
     </>
   );
