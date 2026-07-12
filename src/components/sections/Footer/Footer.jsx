@@ -39,32 +39,17 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-left">
-            <a href="/" className="logo-mark">
+            <Link to="/" className="logo-mark">
               <img src={logo} alt="MyLogo" className="MyLogo" />
-            </a>
+            </Link>
             <div className="socialLinks">
-              <a
-                href="https://github.com/ShozabSHK10"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-text="GitHub"
-              >
+              <a href="https://github.com/ShozabSHK10" target="_blank" rel="noopener noreferrer" data-text="GitHub">
                 <span>GitHub</span>
               </a>
-              <a
-                href="https://www.linkedin.com/in/shozab-sohail5/"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-text="LinkedIn"
-              >
+              <a href="https://www.linkedin.com/in/shozab-sohail5/" target="_blank" rel="noopener noreferrer" data-text="LinkedIn">
                 <span>LinkedIn</span>
               </a>
-              <a
-                href="https://www.behance.net/shozabshk"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-text="Behance"
-              >
+              <a href="https://www.behance.net/shozabshk" target="_blank" rel="noopener noreferrer" data-text="Behance">
                 <span>Behance</span>
               </a>
             </div>
@@ -72,15 +57,15 @@ function Footer() {
 
           <div className="footer-right">
             <span className="nav-title">(Navigation)</span>
-            <a className="nav" href="/">
+            <Link className="nav" to="/">
               Home <span className="nav-arrow">→</span>
-            </a>
-            <a className="nav" href="/work">
+            </Link>
+            <Link className="nav" to="/work">
               Work <span className="nav-arrow">→</span>
-            </a>
-            <a className="nav" href="/playground">
+            </Link>
+            <Link className="nav" to="/playground">
               Playground <span className="nav-arrow">→</span>
-            </a>
+            </Link>
             <a
               className="nav"
               href="/resume.pdf"
@@ -110,9 +95,7 @@ function Footer() {
             <p>Booking projects for Q3 '2026</p>
           </div>
 
-          <p className="footer-copyright">
-            &copy;2026 Shozab Sohail. All rights reserved.
-          </p>
+          <p className="footer-copyright">&copy;2026 Shozab Sohail. All rights reserved.</p>
         </div>
       </div>
     </footer>
