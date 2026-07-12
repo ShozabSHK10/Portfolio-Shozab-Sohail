@@ -23,7 +23,7 @@ function WorkDetails({ }) {
     <>
       <div ref={pageRef} style={{ background: "#262626" }}>
       <WorkImages/>
-      <Footer />
+      <Footer preloaderDone={preloaderDone}/>
       </div>
     </>
   );

@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "../../../animations/gsap";
 import useLiveTime from "../../../hooks/useLiveTime.js";
 
-function Footer() {
+function Footer({preloaderDone}) {
   const { time, date } = useLiveTime();
   const footerRef = useRef(null);
   const [copied, setCopied] = useState(false);
@@ -18,18 +18,34 @@ function Footer() {
 
   useGSAP(
     () => {
-      gsap.from([".footer-left", ".footer-right"], {
-        opacity: 0,
-        y: -40,
-        duration: 0.8,
-        ease: "power3.out",
+      const tl = gsap.timeline({
+        defaults: { ease: "power3.out", duration: 0.8 },
         scrollTrigger: {
           trigger: footerRef.current,
         },
       });
+
+      tl.from(".footer-left", { y: 30, opacity: 0 }, "0")
+        .from(".footer-right", { y: 30, opacity: 0, },"0",);
     },
     { scope: footerRef },
   );
+
+  useEffect(() => {
+      if (preloaderDone) {
+        tlRef.current?.play();
+      }
+    }, [preloaderDone]);
+  
+    // safety net: if preloaderDone never fires (race/prop issue), play on load anyway
+    useEffect(() => {
+      const fallback = setTimeout(() => {
+        if (tlRef.current && tlRef.current.paused()) {
+          tlRef.current.play();
+        }
+      }, 3000); // adjust to your real preloader max duration
+      return () => clearTimeout(fallback);
+    }, []);
 
   return (
     <footer className="footer" ref={footerRef}>
