@@ -11,7 +11,7 @@
   flex-direction: column;
   padding: 2rem;
   background: #111111;
-  border-radius: 1rem;
+  border-radius: clamp(0.5rem, 1vw, 1rem);
   gap: 3rem;
 }
 
@@ -109,8 +109,12 @@
     padding: 2rem 1rem 1rem;
   }
 
+  .work-images{
+    gap: 0.5rem;
+  }
+
   .img-pair {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 }

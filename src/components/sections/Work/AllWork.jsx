@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import "./AllWork.css";
 import WorkCard from "./WorkCard.jsx";
 import work from "../../../data/works.js";
@@ -24,22 +24,33 @@ const assetsById = {
   pf: { image: imagePF, logo: logoFour, hoverImage: hoverImagePF },
 };
 
-function AllWork() {
+function AllWork({ preloaderDone }) {
   const sectionRef = useRef(null);
+  const tlRef = useRef(null);
 
   useGSAP(
     () => {
-      gsap
-        .timeline({ defaults: { ease: "power3.out", duration: 0.8 } })
-        .from(".all-workHeader", { x: -40, opacity: 0 }, "0")
+      tlRef.current = gsap.timeline({
+        defaults: { ease: "power3.out", duration: 0.8 },
+        paused: true,
+      });
+      
+      tlRef.current
+        .from(".all-workHeader", { y: 100, opacity: 0 }, "0")
         .from(
           ".all-workContent",
-          { y: -40, opacity: 0, clearProps: "all" },
+          { y: 100, opacity: 0, clearProps: "all" },
           "0",
         );
     },
     { scope: sectionRef },
   );
+
+  useEffect(() => {
+      if (preloaderDone) {
+        tlRef.current?.play();
+      }
+    }, [preloaderDone]);
 
   return (
     <section className="allWork" id="allWork" ref={sectionRef}>

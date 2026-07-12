@@ -12,7 +12,7 @@
     background: #111111;
     padding: 3rem;
     gap: clamp(1.5rem, 2vw, 3rem);
-    border-radius: 1rem;
+    border-radius: clamp(0.5rem, 1vw, 1rem);
 }
 
 .services-header {

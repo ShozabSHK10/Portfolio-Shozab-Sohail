@@ -9,12 +9,9 @@ import { ScrollTrigger } from "./animations/gsap";
 
 function App() {
   const location = useLocation();
-  const [preloaderDone, setPreloaderDone] = useState(false);
-
-  // reset preloader on every route change
-  useEffect(() => {
-    setPreloaderDone(false);
-  }, [location.pathname]);
+  const isWorkDetails =
+    location.pathname.startsWith("/work/") && location.pathname !== "/work";
+  const [preloaderDone, setPreloaderDone] = useState(isWorkDetails);
 
   useEffect(() => {
     const refresh = () => ScrollTrigger.refresh();
@@ -28,18 +25,30 @@ function App() {
       window.removeEventListener("load", refresh);
       clearTimeout(safety);
     };
-  }, [location.pathname]);
+  }, []);
 
   return (
     <>
-      <Preloader key={location.pathname} onComplete={() => setPreloaderDone(true)} />
-      <div style={{ visibility: preloaderDone ? "visible" : "hidden" }}></div>
-      <Routes>
-        <Route path="/" element={<Home preloaderDone={preloaderDone} />} />
-        <Route path="/work" element={<Work preloaderDone={preloaderDone} />} />
-        <Route path="/work/:id" element={<WorkDetails preloaderDone={preloaderDone} />} />
-        <Route path="/playground" element={<Playground preloaderDone={preloaderDone} />} />
-      </Routes>
+      {!isWorkDetails && !preloaderDone && (
+        <Preloader onComplete={() => setPreloaderDone(true)} />
+      )}
+      <div style={{ visibility: preloaderDone ? "visible" : "hidden" }}>
+        <Routes>
+          <Route path="/" element={<Home preloaderDone={preloaderDone} />} />
+          <Route
+            path="/work"
+            element={<Work preloaderDone={preloaderDone} />}
+          />
+          <Route
+            path="/work/:id"
+            element={<WorkDetails preloaderDone={preloaderDone} />}
+          />
+          <Route
+            path="/playground"
+            element={<Playground preloaderDone={preloaderDone} />}
+          />
+        </Routes>
+      </div>
     </>
   );
 }

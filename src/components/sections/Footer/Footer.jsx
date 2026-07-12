@@ -3,7 +3,6 @@ import logo from "/logo/SHK.svg";
 import { useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "../../../animations/gsap";
-import { Link } from "react-router-dom";
 import useLiveTime from "../../../hooks/useLiveTime.js";
 
 function Footer() {
@@ -40,17 +39,32 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-left">
-            <Link to="/" className="logo-mark">
+            <a href="/" className="logo-mark">
               <img src={logo} alt="MyLogo" className="MyLogo" />
-            </Link>
+            </a>
             <div className="socialLinks">
-              <a href="https://github.com/ShozabSHK10" target="_blank" rel="noopener noreferrer" data-text="GitHub">
+              <a
+                href="https://github.com/ShozabSHK10"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-text="GitHub"
+              >
                 <span>GitHub</span>
               </a>
-              <a href="https://www.linkedin.com/in/shozab-sohail5/" target="_blank" rel="noopener noreferrer" data-text="LinkedIn">
+              <a
+                href="https://www.linkedin.com/in/shozab-sohail5/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-text="LinkedIn"
+              >
                 <span>LinkedIn</span>
               </a>
-              <a href="https://www.behance.net/shozabshk" target="_blank" rel="noopener noreferrer" data-text="Behance">
+              <a
+                href="https://www.behance.net/shozabshk"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-text="Behance"
+              >
                 <span>Behance</span>
               </a>
             </div>
@@ -58,15 +72,15 @@ function Footer() {
 
           <div className="footer-right">
             <span className="nav-title">(Navigation)</span>
-            <Link className="nav" to="/">
+            <a className="nav" href="/">
               Home <span className="nav-arrow">→</span>
-            </Link>
-            <Link className="nav" to="/work">
+            </a>
+            <a className="nav" href="/work">
               Work <span className="nav-arrow">→</span>
-            </Link>
-            <Link className="nav" to="/playground">
+            </a>
+            <a className="nav" href="/playground">
               Playground <span className="nav-arrow">→</span>
-            </Link>
+            </a>
             <a
               className="nav"
               href="/resume.pdf"
@@ -96,7 +110,9 @@ function Footer() {
             <p>Booking projects for Q3 '2026</p>
           </div>
 
-          <p className="footer-copyright">&copy;2026 Shozab Sohail. All rights reserved.</p>
+          <p className="footer-copyright">
+            &copy;2026 Shozab Sohail. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

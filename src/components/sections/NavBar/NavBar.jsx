@@ -2,7 +2,6 @@ import "./NavBar.css";
 import { useState, useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "../../../animations/gsap";
-import { Link } from "react-router-dom";
 import logo from "/logo/SHK.svg";
 
 function NavBar({ preloaderDone }) {
@@ -41,10 +40,10 @@ function NavBar({ preloaderDone }) {
 
       tlRef.current
         .from(".navbar-left", { x: -40, opacity: 0 }, "0")
-        .from(".nav-link", { y: -40, opacity: 0, clearProps: "all" }, "0")
+        .from(".nav-link", { y: -40, opacity: 0, clearProps: "all" }, "0",)
         .from(".navbar-hamburger", { x: 40, opacity: 0 }, "0");
     },
-    { scope: navRef },
+    { scope: navRef }, 
   );
 
   useEffect(() => {
@@ -53,30 +52,20 @@ function NavBar({ preloaderDone }) {
     }
   }, [preloaderDone]);
 
-  // safety net: play regardless if preloaderDone never arrives in time
-  useEffect(() => {
-    const fallback = setTimeout(() => {
-      if (tlRef.current && tlRef.current.paused()) {
-        tlRef.current.play();
-      }
-    }, 3000);
-    return () => clearTimeout(fallback);
-  }, []);
-
   return (
     <>
       <nav className="navbar" ref={navRef}>
-        <Link to="/" className="navbar-left">
+        <a href="/" className="navbar-left">
           <img src={logo} alt="MyLogo" className="brandLogo" />
-        </Link>
+        </a>
 
         <div className="navbar-right">
-          <Link to="/work" className="nav-link" data-text="Work">
+          <a href="/work" className="nav-link" data-text="Work">
             <span>Work</span>
-          </Link>
-          <Link to="/playground" className="nav-link" data-text="Playground">
+          </a>
+          <a href="/playground" className="nav-link" data-text="Playground">
             <span>Playground</span>
-          </Link>
+          </a>
           <a href="#services" className="nav-link" data-text="Services">
             <span>Services</span>
           </a>
@@ -101,20 +90,20 @@ function NavBar({ preloaderDone }) {
 
       <div className={`navbar-drawer ${menuOpen ? "drawer-open" : ""}`}>
         <div className="drawer-header">
-          <Link
-            to="/work"
+          <a
+            href="/work"
             className="drawer-link"
             onClick={() => toggleMenu(false)}
           >
             Work
-          </Link>
-          <Link
-            to="/playground"
+          </a>
+          <a
+            href="/playground"
             className="drawer-link"
             onClick={() => toggleMenu(false)}
           >
             Playground
-          </Link>
+          </a>
           <a
             href="#services"
             className="drawer-link"
@@ -135,6 +124,7 @@ function NavBar({ preloaderDone }) {
         <div className="menu-copyright">
           &copy;2026 Shozab Sohail. All rights reserved.
         </div>
+        
       </div>
     </>
   );

@@ -87,12 +87,6 @@
         flex-direction: column;
     }
 
-    .about-header {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
     .about-stats{
       justify-content: center;
     }

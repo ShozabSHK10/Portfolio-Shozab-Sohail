@@ -44,7 +44,7 @@
 }
 
 .service-image img {
-    aspect-ratio: 7/3;
+    aspect-ratio: 14/9;
     width: clamp(15rem, 25vw, 25rem);  
     transition: opacity 1s ease;
     object-fit: contain;
@@ -64,7 +64,6 @@
     }  
     
     .service-image {
-        justify-content: flex-start;
         flex: 4;
     }
 }

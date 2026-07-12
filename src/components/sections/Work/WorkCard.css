@@ -1,7 +1,7 @@
 .workCard{
    display: flex;
     flex-direction: column;
-    border-radius: clamp(0.75rem, 1vw, 1rem);
+    border-radius: clamp(0.5rem, 1vw, 1rem);
     padding: 1rem;
     gap: 1rem;
     background: #111111;
