@@ -1,4 +1,4 @@
-.work {
+.selectedWork {
   display: flex;
   position: sticky;
   flex-direction: column;
@@ -27,7 +27,6 @@
 .work-button {
   display: flex;
   justify-content: center;
-  opacity: 0.5;
 }
 
 @media (max-width: 1400px) {

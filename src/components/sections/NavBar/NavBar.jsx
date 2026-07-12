@@ -60,11 +60,11 @@ function NavBar({ preloaderDone }) {
         </a>
 
         <div className="navbar-right">
-          <a href="#about" className="nav-link" data-text="About">
-            <span>About</span>
-          </a>
-          <a href="#work" className="nav-link" data-text="Work">
+          <a href="/work" className="nav-link" data-text="Work">
             <span>Work</span>
+          </a>
+          <a href="/playground" className="nav-link" data-text="Playground">
+            <span>Playground</span>
           </a>
           <a href="#services" className="nav-link" data-text="Services">
             <span>Services</span>
@@ -91,18 +91,18 @@ function NavBar({ preloaderDone }) {
       <div className={`navbar-drawer ${menuOpen ? "drawer-open" : ""}`}>
         <div className="drawer-header">
           <a
-            href="#about"
-            className="drawer-link"
-            onClick={() => toggleMenu(false)}
-          >
-            About
-          </a>
-          <a
-            href="#work"
+            href="/work"
             className="drawer-link"
             onClick={() => toggleMenu(false)}
           >
             Work
+          </a>
+          <a
+            href="/playground"
+            className="drawer-link"
+            onClick={() => toggleMenu(false)}
+          >
+            Playground
           </a>
           <a
             href="#services"
@@ -124,6 +124,7 @@ function NavBar({ preloaderDone }) {
         <div className="menu-copyright">
           &copy;2026 Shozab Sohail. All rights reserved.
         </div>
+        
       </div>
     </>
   );

@@ -1,0 +1,41 @@
+.allWork {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10rem 2rem 7rem;
+  background: #262626;
+  gap: 3rem;
+}
+
+.all-workHeader {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Pavot-Bold";
+  font-size: clamp(3rem, 8vw, 8rem);
+  color: #ffffff;
+  line-height: 0.8;
+}
+
+.all-workContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1400px) {
+  .all-workContent {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .allWork {
+    padding: 7rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .all-workContent {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

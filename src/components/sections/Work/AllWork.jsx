@@ -1,5 +1,5 @@
-import { useRef } from "react";
-import "./Work.css";
+import { useRef, useEffect } from "react";
+import "./AllWork.css";
 import WorkCard from "./WorkCard.jsx";
 import work from "../../../data/works.js";
 import { useGSAP } from "@gsap/react";
@@ -25,41 +25,37 @@ const assetsById = {
   pf: { image: imagePF, logo: logoFour, hoverImage: hoverImagePF },
 };
 
-function Work() {
+function Work({ preloaderDone }) {
   const sectionRef = useRef(null);
+  const tlRef = useRef(null);
 
   useGSAP(
     () => {
-      gsap.from(".work-header span", {
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-        },
+      tlRef.current = gsap.timeline({
+        defaults: { ease: "power3.out", duration: 0.8 },
+        paused: true,
       });
 
-      gsap.from(".workCard", {
-        y: 40,
-        opacity: 0,
-        duration: 1.5,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".work-content",
-        },
-      });
+      tlRef.current
+        .from(".all-workHeader", { x: -40, opacity: 0 }, "0")
+        .from(".all-workContent", { y: -40, opacity: 0, clearProps: "all" }, "0")
     },
     { scope: sectionRef },
   );
 
+  useEffect(() => {
+    if (preloaderDone) {
+      tlRef.current?.play();
+    }
+  }, [preloaderDone]);
+
   return (
-    <section className="work" id="work" ref={sectionRef}>
-      <div className="work-header">
-        <span>SELECTED WORK</span>
+    <section className="allWork" id="allWork" ref={sectionRef}>
+      <div className="all-workHeader">
+        <span>WORK</span>
         <span>(4)</span>
       </div>
-      <div className="work-content">
+      <div className="all-workContent">
         {work
           .filter((w) => assetsById[w.id])
           .map((w) => (
@@ -74,9 +70,6 @@ function Work() {
               logo={assetsById[w.id].logo}
             />
           ))}
-      </div>
-      <div className="work-button">
-        <Button text="All projects" disabled={true} />
       </div>
     </section>
   );

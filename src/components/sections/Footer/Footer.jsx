@@ -72,10 +72,10 @@ function Footer() {
             <a className="nav" href="/">
               Home <span className="nav-arrow">→</span>
             </a>
-            <a className="nav" href="#work">
+            <a className="nav" href="/work">
               Work <span className="nav-arrow">→</span>
             </a>
-            <a className="nav" href="#playground">
+            <a className="nav" href="/playground">
               Playground <span className="nav-arrow">→</span>
             </a>
             <a

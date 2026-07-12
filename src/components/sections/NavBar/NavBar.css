@@ -1,18 +1,13 @@
-/* :root {
-  --navbar-height: 56px; 
-} */
-
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* height: var(--navbar-height); */
   background: transparent;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 9999;
   padding: 1.5rem 2rem 0rem;
 }
 

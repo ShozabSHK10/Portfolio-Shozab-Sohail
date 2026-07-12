@@ -1,0 +1,98 @@
+.gallery-viewport {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  background: #111111;
+  cursor: grab;
+}
+
+.gallery-viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.back-home {
+    display: flex;
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 1.25rem;
+    gap: 0.5rem;
+}
+
+.back-home:hover {
+    color: #969696;
+}
+
+.gallery-text {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    z-index: 2;
+    pointer-events: none;
+    max-width: 27rem;
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+.gallery-bgText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+    color: #3f3f3f;
+    font-family: "Pavot-Regular";
+    font-size: 15rem;
+}
+
+.gallery-scrollHint {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  z-index: 2;
+  pointer-events: none;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.gallery-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gallery-item {
+  position: absolute;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width:900px) {
+    .back-home, .gallery-scrollHint, .gallery-text {
+        font-size: 1rem;
+    }
+
+    .back-home {
+        top: 16px;
+        left: 16px;
+    }
+
+    .gallery-text {
+        bottom: 16px;
+        left: 16px;
+    }
+
+    .gallery-scrollHint {
+        top: 16px;
+        right: 16px;
+    }
+}
