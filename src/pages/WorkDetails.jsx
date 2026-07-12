@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import WorkImages from "../components/sections/Work/WorkImages.jsx";
 import Footer from "../components/sections/Footer/Footer.jsx";
 
-function WorkDetails({ }) {
+function WorkDetails({ preloaderDone}) {
   const { id } = useParams();
   const pageRef = useRef(null);
 
