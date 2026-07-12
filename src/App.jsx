@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Work from "./pages/Work.jsx";
 import WorkDetails from "./pages/WorkDetails.jsx";
@@ -10,7 +10,7 @@ function App() {
   const [preloaderDone, setPreloaderDone] = useState(false);
 
   return (
-      <BrowserRouter>
+    <>
       <Preloader onComplete={() => setPreloaderDone(true)} />
       <div style={{ visibility: preloaderDone ? "visible" : "hidden" }}></div>
       <Routes>
@@ -19,7 +19,7 @@ function App() {
         <Route path="/work/:id" element={<WorkDetails/>} />
         <Route path="/playground" element={<Playground/>} />
       </Routes>
-      </BrowserRouter>
+    </>
   );
 }
 
