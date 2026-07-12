@@ -19,10 +19,10 @@ function Home( { preloaderDone } ) {
       <NavBar preloaderDone={preloaderDone} />
       <Hero preloaderDone={preloaderDone}/>
       <About />
-      <SelectedWork />
+      <SelectedWork preloaderDone={preloaderDone}/>
       <Carousel />
-      <Services />
-      <Footer />
+      <Services preloaderDone={preloaderDone}/>
+      <Footer preloaderDone={preloaderDone}/>
     </>
   );
 }

@@ -19,7 +19,7 @@
     left: 32px;
     z-index: 2;
     color: #ffffff;
-    font-size: 1.25rem;
+    font-size: clamp(0.75rem, 1vw, 1.25rem);
     gap: 0.5rem;
 }
 
@@ -35,7 +35,7 @@
     pointer-events: none;
     max-width: 27rem;
     color: #ffffff;
-    font-size: 1.25rem;
+    font-size: clamp(0.75rem, 1vw, 1.25rem);
 }
 
 .gallery-bgText {
@@ -57,7 +57,7 @@
   z-index: 2;
   pointer-events: none;
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: clamp(0.75rem, 1vw, 1.25rem);
 }
 
 .gallery-canvas {
@@ -77,10 +77,6 @@
 }
 
 @media (max-width:900px) {
-    .back-home, .gallery-scrollHint, .gallery-text {
-        font-size: 1rem;
-    }
-
     .back-home {
         top: 16px;
         left: 16px;
@@ -89,6 +85,7 @@
     .gallery-text {
         bottom: 16px;
         left: 16px;
+        max-width: 20rem;
     }
 
     .gallery-scrollHint {

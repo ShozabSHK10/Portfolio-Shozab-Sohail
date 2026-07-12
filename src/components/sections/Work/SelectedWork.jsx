@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import "./SelectedWork.css";
 import WorkCard from "./WorkCard.jsx";
 import work from "../../../data/works.js";
@@ -25,36 +25,46 @@ const assetsById = {
   pf: { image: imagePF, logo: logoFour, hoverImage: hoverImagePF },
 };
 
-function SelectedWork() {
-  const sectionRef = useRef(null);
+function SelectedWork({ preloaderDone }) {
+  const selectedWorkRef = useRef(null);
+  const tlRef = useRef(null);
 
   useGSAP(
-    () => {
-      gsap.from(".work-header span", {
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-        },
-      });
+  () => {
+    const tl = gsap.timeline({
+      defaults: { ease: "power3.out", duration: 0.8 },
+      scrollTrigger: {
+        trigger: selectedWorkRef.current,
+      },
+    });
 
-      gsap.from(".work-content", {
-        y: 40,
-        opacity: 0,
-        duration: 1.5,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".work-content",
-        },
-      });
-    },
-    { scope: sectionRef },
-  );
+    tl.from(".work-header span", { y: 30, opacity: 0 }, "0")
+      .from(".work-content", { y: 40, opacity: 0, duration: 1.5 }, "0");
+  },
+  { scope: selectedWorkRef },
+);
+
+  //preloader
+
+  useEffect(() => {
+    if (preloaderDone) {
+      tlRef.current?.play();
+    }
+  }, [preloaderDone]);
+
+  // safety net: if preloaderDone never fires (race/prop issue), play on load anyway
+  useEffect(() => {
+    const fallback = setTimeout(() => {
+      if (tlRef.current && tlRef.current.paused()) {
+        tlRef.current.play();
+      }
+    }, 3000); // adjust to your real preloader max duration
+    return () => clearTimeout(fallback);
+  }, []);
+
 
   return (
-    <section className="selectedWork" id="selectedWork" ref={sectionRef}>
+    <section className="selectedWork" id="selectedWork" ref={selectedWorkRef}>
       <div className="work-header">
         <span>SELECTED WORK</span>
         <span>(2)</span>
@@ -77,7 +87,7 @@ function SelectedWork() {
           ))}
       </div>
       <div className="work-button">
-        <Button link="/work" text="All Works"/>
+        <Button link="/work" text="All Works" />
       </div>
     </section>
   );
