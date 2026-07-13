@@ -19,6 +19,7 @@ function WorkDetails({ preloaderDone}) {
     },
     { scope: pageRef, dependencies: [id] }
   );
+  
   return (
     <>
       <div ref={pageRef} style={{ background: "#262626" }}>
