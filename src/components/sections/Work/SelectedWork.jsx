@@ -17,7 +17,6 @@ import hoverImageBA from "../../../assets/projectImages/imagesBA/imgOneBA.png";
 import hoverImageSDS from "../../../assets/projectImages/imagesSDS/imgTenSDS.png";
 import hoverImageHM from "../../../assets/projectImages/imagesHM/imgTwoHM.png";
 import hoverImagePF from "../../../assets/projectImages/imagesPF/imgOnePF.png";
-import { select } from "framer-motion/client";
 
 const assetsById = {
   ba: { image: imageBA, logo: logoOne, hoverImage: hoverImageBA },
@@ -39,7 +38,7 @@ function SelectedWork() {
       });
 
       tl.from(".work-header", {
-        y: 100,
+        y: 50,
         opacity: 0,
         duration: 1,
       })

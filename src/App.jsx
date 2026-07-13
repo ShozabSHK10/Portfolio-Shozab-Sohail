@@ -14,16 +14,22 @@ function App() {
   const [preloaderDone, setPreloaderDone] = useState(isWorkDetails);
 
   useEffect(() => {
-    const refresh = () => ScrollTrigger.refresh();
+    let rafId = null;
+    const refresh = () => {
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => ScrollTrigger.refresh());
+    };
+
+    const observer = new ResizeObserver(refresh);
+    observer.observe(document.body);
 
     window.addEventListener("load", refresh);
-    if (document.readyState === "complete") refresh();
     if (document.fonts?.ready) document.fonts.ready.then(refresh);
 
-    const safety = setTimeout(refresh, 1500);
     return () => {
+      observer.disconnect();
       window.removeEventListener("load", refresh);
-      clearTimeout(safety);
+      cancelAnimationFrame(rafId);
     };
   }, []);
 
