@@ -14,25 +14,29 @@ import imgNine from "../../../assets/playgroundImages/taj.png";
 import imgTen from "../../../assets/playgroundImages/africanMenu.png";
 import imgEleven from "../../../assets/playgroundImages/lebaneseMenu.png";
 import imgTwelve from "../../../assets/playgroundImages/omaniMenu.png";
+import imgThirteen from "../../../assets/playgroundImages/greenOlive.png";
+import imgFourteen from "../../../assets/playgroundImages/cardDesignTwo.png";
 
-// Base layout, designed at desktop reference size
 const BASE_CANVAS_W = 4000;
-const BASE_CANVAS_H = 3400;
-const BASE_REFERENCE_VIEWPORT = 1600; // viewport width at which scale = 1
+const BASE_CANVAS_H = 3200;
+const BASE_REFERENCE_VIEWPORT = 1600; 
 
 const ITEMS = [
-  { id: 1, x: 2300, y: 1150, w: 500, src: imgOne },
+  { id: 1, x: 2375, y: 1150, w: 500, src: imgOne },
   { id: 2, x: 400, y: 250, w: 500, src: imgTwo },
-  { id: 3, x: 2400, y: 300, w: 500, src: imgThree },
+  { id: 3, x: 2450, y: 300, w: 500, src: imgThree },
   { id: 4, x: 3000, y: 200, w: 500, src: imgFour },
   { id: 5, x: 2900, y: 1100, w: 500, src: imgFive },
-  { id: 6, x: 700, y: 1200, w: 400, src: imgSix },
+  { id: 6, x: 650, y: 1200, w: 400, src: imgSix },
   { id: 7, x: 200, y: 1200, w: 400, src: imgSeven },
   { id: 8, x: 250, y: 2400, w: 700, src: imgEight },
-  { id: 9, x: 2600, y: 1500, w: 700, src: imgNine },
-  { id: 10, x: 2000, y: 2125, w: 500, src: imgTen },
-  { id: 11, x: 2600, y: 2200, w: 500, src: imgEleven },
+  { id: 9, x: 2600, y: 1450, w: 700, src: imgNine },
+  { id: 10, x: 2100, y: 2125, w: 500, src: imgTen },
+  { id: 11, x: 2650, y: 2200, w: 500, src: imgEleven },
   { id: 12, x: 3200, y: 2150, w: 500, src: imgTwelve },
+  { id: 13, x: 1900, y: 200, w: 500, src: imgThirteen },
+  { id: 14, x: 250, y: 2650, w: 700, src: imgFourteen },
+
 ];
 
 function getScaleForViewport(vw) {
