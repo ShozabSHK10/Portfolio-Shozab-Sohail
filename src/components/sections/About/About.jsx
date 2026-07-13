@@ -1,56 +1,7 @@
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "../../../animations/gsap";
 import "./About.css";
 import image from "../../../assets/projectImages/imagesSDS/imgNineSDS.png";
 
-
 function About() {
-  // const sectionRef = useRef(null);
-
-  // useGSAP(() => {
-  //     gsap.from(".about-header", {
-  //       y: -30,
-  //       duration: 1.2,
-  //       ease: "power4.out",
-  //       scrollTrigger: {
-  //         trigger: sectionRef.current,
-  //       },
-  //     });
-
-  //     gsap.from(".about-description span", {
-  //       opacity: 0,
-  //       y: 30,
-  //       duration: 0.9,
-  //       ease: "power3.out",
-  //       scrollTrigger: {
-  //         trigger: ".about-description",
-  //       },
-  //     });
-
-  //     gsap.from(".about-image img", {
-  //       clipPath: "inset(100% 0% 0% 0%)",
-  //       scale: 1.15,
-  //       duration: 1,
-  //       ease: "power4.out",
-  //       scrollTrigger: {
-  //         trigger: ".about-image",
-  //       },
-  //     });
-
-  //     gsap.from(".about-stats .stat", {
-  //       opacity: 0,
-  //       y: 30,
-  //       duration: 0.9,
-  //       ease: "power3.out",
-  //       scrollTrigger: {
-  //         trigger: ".about-stats",
-  //       },
-  //     });
-  //   }, 
-  //   { scope: sectionRef}
-  // );
-
 
   return (
     <section className="about" id="about">

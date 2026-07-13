@@ -1,9 +1,6 @@
-import { useRef } from "react";
 import "./SelectedWork.css";
 import WorkCard from "./WorkCard.jsx";
 import work from "../../../data/works.js";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "../../../animations/gsap.js";
 import Button from "../../button/Button.jsx";
 import imageBA from "../../../assets/projectImages/imagesBA/imgSixBA.jpg";
 import imageSDS from "../../../assets/projectImages/imagesSDS/imgOneSDS.png";
@@ -26,28 +23,9 @@ const assetsById = {
 };
 
 function SelectedWork() {
-  const selectedWorkRef = useRef(null);
-
-  useGSAP(
-    () => {
-      const tl = gsap.timeline({
-        defaults: { ease: "power3.out", duration: 0.8 },
-        scrollTrigger: {
-          trigger: selectedWorkRef.current,
-        },
-      });
-
-      tl.from(".work-header span", { y: 30, opacity: 0 }, "0").from(
-        ".work-content",
-        { y: 40, opacity: 0, duration: 1.5 },
-        "0",
-      );
-    },
-    { scope: selectedWorkRef },
-  );
 
   return (
-    <section className="selectedWork" id="selectedWork" ref={selectedWorkRef}>
+    <section className="selectedWork" id="selectedWork">
       <div className="work-header">
         <span>SELECTED WORK</span>
         <span>(2)</span>

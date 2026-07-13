@@ -1,8 +1,5 @@
-import { useRef } from "react";
 import "./Services.css";
 import ServiceCard from "./ServiceCard.jsx";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "../../../animations/gsap";
 import imageOne from "../../../assets/servicesImages/one.jpg";
 import imageTwo from "../../../assets/servicesImages/two.jpg";
 import imageThree from "../../../assets/servicesImages/three.jpg";
@@ -43,26 +40,9 @@ const services = [
 ];
 
 function Services() {
-  const servicesRef = useRef(null);
-
-  useGSAP(
-    () => {
-      gsap.from(".services-header span", {
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: servicesRef.current,
-        },
-      });
-    },
-    { scope: servicesRef },
-  );
-
+  
   return (
-    <section className="services" id="services" ref={servicesRef}>
+    <section className="services" id="services">
       <div className="services-container">
         <div className="services-header">
           <span>SERVICES</span>
