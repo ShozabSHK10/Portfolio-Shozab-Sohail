@@ -66,8 +66,14 @@ function NavBar({ preloaderDone }) {
           <a href="/playground" className="nav-link" data-text="Playground">
             <span>Playground</span>
           </a>
-          <a href="#services" className="nav-link" data-text="Services">
-            <span>Services</span>
+          <a
+            href="https://gumroad.com/products"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link"
+            data-text="Resources"
+          >
+            <span>Resources</span>
           </a>
           <a
             href="/resume.pdf"
@@ -105,11 +111,12 @@ function NavBar({ preloaderDone }) {
             Playground
           </a>
           <a
-            href="#services"
+            href="https://gumroad.com/products"
+            target="_blank"
+            rel="noopener noreferrer"
             className="drawer-link"
-            onClick={() => toggleMenu(false)}
           >
-            Services
+            Resources
           </a>
           <a
             href="/resume.pdf"

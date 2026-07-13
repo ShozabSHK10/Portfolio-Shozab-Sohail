@@ -23,6 +23,14 @@ function Footer() {
             </a>
             <div className="socialLinks">
               <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-text="Resume"
+              >
+                <span>Resume</span>
+              </a>
+              <a
                 href="https://github.com/ShozabSHK10"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -62,11 +70,11 @@ function Footer() {
             </a>
             <a
               className="nav"
-              href="/resume.pdf"
+              href="https://gumroad.com/products"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Resume <span className="nav-arrow">→</span>
+              Resources <span className="nav-arrow">→</span>
             </a>
           </div>
         </div>
