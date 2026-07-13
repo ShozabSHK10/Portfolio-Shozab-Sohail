@@ -19,14 +19,14 @@ function About() {
       tl.from(".about-header", {
         y: -100,
         opacity: 0,
-        duration: 0.8,
+        duration: 1,
       })
         .from(
           ".about-description",
           {
             y: 40,
             opacity: 0,
-            duration: 0.8,
+            duration: 1,
           },
           "-=0.4",
         )

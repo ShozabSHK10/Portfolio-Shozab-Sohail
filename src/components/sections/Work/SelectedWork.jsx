@@ -1,4 +1,7 @@
 import "./SelectedWork.css";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap, ScrollTrigger } from "../../../animations/gsap";
 import WorkCard from "./WorkCard.jsx";
 import work from "../../../data/works.js";
 import Button from "../../button/Button.jsx";
@@ -14,6 +17,7 @@ import hoverImageBA from "../../../assets/projectImages/imagesBA/imgOneBA.png";
 import hoverImageSDS from "../../../assets/projectImages/imagesSDS/imgTenSDS.png";
 import hoverImageHM from "../../../assets/projectImages/imagesHM/imgTwoHM.png";
 import hoverImagePF from "../../../assets/projectImages/imagesPF/imgOnePF.png";
+import { select } from "framer-motion/client";
 
 const assetsById = {
   ba: { image: imageBA, logo: logoOne, hoverImage: hoverImageBA },
@@ -23,9 +27,37 @@ const assetsById = {
 };
 
 function SelectedWork() {
+  const selectedWorkRef = useRef(null);
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: selectedWorkRef.current,
+          start: "top 80%",
+        },
+      });
+
+      tl.from(".work-header", {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+      })
+       .from(
+        ".work-content",
+        {
+          y: 100,
+          duration: 1,
+          opacity: 0,
+        },
+        "-=0.4",
+      );
+    },
+    { scope: selectedWorkRef },
+  );
 
   return (
-    <section className="selectedWork" id="selectedWork">
+    <section className="selectedWork" id="selectedWork" ref={selectedWorkRef}>
       <div className="work-header">
         <span>SELECTED WORK</span>
         <span>(2)</span>
