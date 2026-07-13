@@ -1,13 +1,10 @@
 import "./Footer.css";
 import logo from "/logo/SHK.svg";
-import { useState, useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "../../../animations/gsap";
+import { useState } from "react";
 import useLiveTime from "../../../hooks/useLiveTime.js";
 
 function Footer() {
   const { time, date } = useLiveTime();
-  const footerRef = useRef(null);
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
@@ -16,26 +13,8 @@ function Footer() {
     setTimeout(() => setCopied(false), 1000);
   };
 
-  useGSAP(
-    () => {
-      const tl = gsap.timeline({
-        defaults: { ease: "power3.out", duration: 0.8 },
-        scrollTrigger: {
-          trigger: footerRef.current,
-        },
-      });
-
-      tl.from(".footer-left", { y: 30, opacity: 0 }, "0").from(
-        ".footer-right",
-        { y: 30, opacity: 0 },
-        "0",
-      );
-    },
-    { scope: footerRef },
-  );
-
   return (
-    <footer className="footer" ref={footerRef}>
+    <footer className="footer">
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-left">
