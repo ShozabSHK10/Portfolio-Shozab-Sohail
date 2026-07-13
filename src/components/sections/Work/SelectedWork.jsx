@@ -51,7 +51,12 @@ function SelectedWork() {
           opacity: 0,
         },
         "-=0.4",
-      );
+      )
+      .from(".work-button", {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+      }, "-=0.4")
     },
     { scope: selectedWorkRef },
   );

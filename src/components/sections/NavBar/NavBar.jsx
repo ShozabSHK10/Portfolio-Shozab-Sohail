@@ -34,7 +34,7 @@ function NavBar({ preloaderDone }) {
   useGSAP(
     () => {
       tlRef.current = gsap.timeline({
-        defaults: { ease: "power3.out", duration: 0.8 },
+        defaults: { ease: "power3.out", duration: 3 },
         paused: true,
       });
 

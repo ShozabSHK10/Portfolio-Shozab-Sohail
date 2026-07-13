@@ -17,7 +17,7 @@ function About() {
       });
 
       tl.from(".about-header", {
-        y: -100,
+        y: 50,
         opacity: 0,
         duration: 1,
       })

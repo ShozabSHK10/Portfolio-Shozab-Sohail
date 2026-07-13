@@ -49,8 +49,8 @@ function Preloader({ onComplete }) {
     tl.to(lines, {
       scaleX: 0,
       transformOrigin: "right",
-      duration: 0.05,
-      stagger: { each: 0.03, from: "end", ease: "none" },
+      duration: 0.06,
+      stagger: { each: 0.045, from: "end", ease: "none" },
       ease: "none",
       onComplete: () => {
         wrapperRef.current.style.display = "none";

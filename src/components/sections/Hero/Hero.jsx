@@ -21,7 +21,7 @@ function Hero({ preloaderDone }) {
   useGSAP(
     () => {
       tlRef.current = gsap.timeline({
-        defaults: { ease: "power3.out", duration: 0.8 },
+        defaults: { ease: "power3.out", duration: 3 },
         paused: true,
       });
 
@@ -30,7 +30,6 @@ function Hero({ preloaderDone }) {
         {
           y: -40,
           opacity: 0,
-          duration: 0.8,
           ease: "power3.out",
         },
         "0",
@@ -41,7 +40,6 @@ function Hero({ preloaderDone }) {
         {
           y: 40,
           opacity: 0,
-          duration: 0.8,
           ease: "power3.out",
         },
         "0",
