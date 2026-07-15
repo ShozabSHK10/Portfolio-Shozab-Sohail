@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "../../../animations/gsap";
 import "./About.css";
-import image from "../../../assets/projectImages/imagesSDS/imgNineSDS.png";
+import image from "../../../assets/bgImages/Cancelooo.jpg";
 
 function About() {
   const aboutRef = useRef(null);
@@ -28,7 +28,7 @@ function About() {
             opacity: 0,
             duration: 1,
           },
-          "-=0.4",
+          "-=0.5",
         )
         .from(
           ".stat",
@@ -38,7 +38,7 @@ function About() {
             stagger: 0.15,
             duration: 0.6,
           },
-          "-=0.3",
+          "-=0.5",
         )
         .from(
           ".about-image",

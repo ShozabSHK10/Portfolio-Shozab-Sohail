@@ -1,7 +1,7 @@
-import { useRef, useState, useEffect } from "react";
 import "./SelectedWork.css";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "../../../animations/gsap";
+// import { useRef } from "react";
+// import { useGSAP } from "@gsap/react";
+// import { gsap, ScrollTrigger } from "../../../animations/gsap";
 import WorkCard from "./WorkCard.jsx";
 import work from "../../../data/works.js";
 import Button from "../../button/Button.jsx";
@@ -25,51 +25,43 @@ const assetsById = {
   pf: { image: imagePF, logo: logoFour, hoverImage: hoverImagePF },
 };
 
-const selectedIds = work
-  .filter((w) => assetsById[w.id])
-  .slice(0, 2)
-  .map((w) => w.id);
-
 function SelectedWork() {
-  const selectedWorkRef = useRef(null);
-  const [imagesReady, setImagesReady] = useState(false);
+  // const selectedWorkRef = useRef(null);
 
-  // decode the actual images used in this section before letting
-  // ScrollTrigger measure anything
-  useEffect(() => {
-    const srcs = selectedIds.map((id) => assetsById[id].image);
-    Promise.all(
-      srcs.map(
-        (src) =>
-          new Promise((resolve) => {
-            const img = new Image();
-            img.src = src;
-            img.decode ? img.decode().then(resolve).catch(resolve) : (img.onload = resolve);
-          }),
-      ),
-    ).then(() => setImagesReady(true));
-  }, []);
+  // useGSAP(
+  //   () => {
+  //     const tl = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: selectedWorkRef.current,
+  //         start: "top 80%",
+  //       },
+  //     });
 
-  useGSAP(
-    () => {
-      if (!imagesReady) return;
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: selectedWorkRef.current,
-          start: "top 80%",
-        },
-      });
-
-      tl.from(".work-header", { y: 50, opacity: 0, duration: 1 })
-        .from(".work-content", { y: 100, opacity: 0, duration: 1 }, "-=0.4")
-        .from(".work-button", { y: 50, opacity: 0, duration: 1 }, "-=0.4");
-    },
-    { scope: selectedWorkRef, dependencies: [imagesReady] },
-  );
+  //     tl.from(".work-header", {
+  //       y: 50,
+  //       opacity: 0,
+  //       duration: 1,
+  //     })
+  //      .from(
+  //       ".work-content",
+  //       {
+  //         y: 100,
+  //         duration: 1,
+  //         opacity: 0,
+  //       },
+  //       "-=0.4",
+  //     )
+  //     .from(".work-button", {
+  //       y: 50,
+  //       opacity: 0,
+  //       duration: 1,
+  //     }, "-=0.4")
+  //   },
+  //   { scope: selectedWorkRef },
+  // );
 
   return (
-    <section className="selectedWork" id="selectedWork" ref={selectedWorkRef}>
+    <section className="selectedWork" id="selectedWork">
       <div className="work-header">
         <span>SELECTED WORK</span>
         <span>(2)</span>

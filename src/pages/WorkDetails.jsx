@@ -1,32 +1,30 @@
-import { useRef } from "react";
+import { useRef, useLayoutEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import WorkImages from "../components/sections/Work/WorkImages.jsx";
 import Footer from "../components/sections/Footer/Footer.jsx";
 
-function WorkDetails({ preloaderDone}) {
+function WorkDetails({ preloaderDone }) {
   const { id } = useParams();
   const pageRef = useRef(null);
 
-  useGSAP(
-    () => {
-      gsap.fromTo(
-        pageRef.current,
-        { y: 600, opacity: 1 },
-        { y: 0, opacity: 1, duration: 2, ease: "power3.out" }
-      );
-    },
-    { scope: pageRef, dependencies: [id] }
-  );
-  
+  useLayoutEffect(() => {
+    document.documentElement.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    document.documentElement.style.scrollBehavior = "";
+  }, [id]);
+
   return (
-    <>
-      <div ref={pageRef} style={{ background: "#262626" }}>
-      <WorkImages/>
+    <div
+      ref={pageRef}
+      style={{ background: "#262626"}}
+    >
+      <WorkImages />
       <Footer />
-      </div>
-    </>
+    </div>
   );
 }
 
