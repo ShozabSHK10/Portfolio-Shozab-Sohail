@@ -1,9 +1,9 @@
 import DraggableGallery from "../components/sections/DraggableGallery/DraggableGallery.jsx";
 
-function Playground( {preloaderDone} ) {
+function Playground() {
     return (
         <div className="playground">
-            <DraggableGallery />
+            <DraggableGallery/>
         </div>
     );
 }

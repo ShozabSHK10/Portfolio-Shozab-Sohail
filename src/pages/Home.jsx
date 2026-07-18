@@ -5,6 +5,7 @@ import About from "../components/sections/About/About.jsx";
 import SelectedWork from "../components/sections/Work/SelectedWork.jsx";
 import Carousel from "../components/sections/Carousel/Carousel.jsx";
 import Services from "../components/sections/Services/Services.jsx";
+import TechStack from "../components/sections/TechStack/TechStack.jsx";
 import Footer from "../components/sections/Footer/Footer.jsx";
 
 function Home( { preloaderDone } ) {
@@ -22,6 +23,7 @@ function Home( { preloaderDone } ) {
       <SelectedWork />
       <Carousel />
       <Services />
+      <TechStack />  
       <Footer />
     </>
   );

@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     font-family: "Pavot-Bold";
-    letter-spacing: 0.03em;
+    letter-spacing: -0.01em;
     font-size: clamp(3rem, 10vw, 10rem);
     line-height: 0.8;
     color: #969696;

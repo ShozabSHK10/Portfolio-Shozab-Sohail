@@ -11,7 +11,8 @@ function App() {
   const location = useLocation();
   const isWorkDetails =
     location.pathname.startsWith("/work/") && location.pathname !== "/work";
-  const [preloaderDone, setPreloaderDone] = useState(isWorkDetails);
+  const isPlayground = location.pathname === "/playground";
+  const [preloaderDone, setPreloaderDone] = useState(isWorkDetails || isPlayground);
 
   useEffect(() => {
     const refresh = () => ScrollTrigger.refresh();
@@ -29,7 +30,7 @@ function App() {
 
   return (
     <>
-      {!isWorkDetails && !preloaderDone && (
+      {!isWorkDetails && !isPlayground && !preloaderDone && (
         <Preloader onComplete={() => setPreloaderDone(true)} />
       )}
       <div style={{ visibility: preloaderDone ? "visible" : "hidden" }}>

@@ -23,8 +23,8 @@ function Preloader({ onComplete }) {
       ease: "power2.inOut",
       onUpdate() {
         const v = Math.round(obj.val);
-        counter.textContent = String(v).padStart(2, "0") + "%";
-        bar.style.width = v + "%";
+        counter.textContent = String(v).padStart(2, "0");
+        bar.style.width = v;
       },
     }, 0);
 

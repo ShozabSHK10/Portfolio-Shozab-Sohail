@@ -14,7 +14,7 @@ import logoThree from "../../../assets/clientLogos/hmLogo.svg";
 import logoFour from "../../../assets/clientLogos/pfLogo.svg";
 import hoverImageBA from "../../../assets/projectImages/imagesBA/imgOneBA.png";
 import hoverImageSDS from "../../../assets/projectImages/imagesSDS/imgTenSDS.png";
-import hoverImageHM from "../../../assets/projectImages/imagesHM/imgTwoHM.png";
+import hoverImageHM from "../../../assets/projectImages/imagesHM/imgFiveHM.png";
 import hoverImagePF from "../../../assets/projectImages/imagesPF/imgOnePF.png";
 
 const assetsById = {

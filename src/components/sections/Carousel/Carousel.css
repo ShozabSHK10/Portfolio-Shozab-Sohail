@@ -3,7 +3,7 @@
   background-color: #262626;
   overflow: hidden;
   width: 100%;
-  padding: 5rem 0rem;
+  padding: 3rem 0rem 4rem;
 }
 
 .carousel-track {
@@ -20,13 +20,13 @@
   white-space: nowrap;
   font-size: clamp(4rem, 8vw, 8rem);
   font-weight: 700;
-  color: #111111;
+  color: #969696;
   letter-spacing: -0.01em;
   transition: opacity 0.3s ease;
 }
 
 .carousel:hover .carousel-slide {
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 .carousel-slide:hover {
@@ -34,9 +34,8 @@
 }
 
 .carousel-dot {
-  opacity: 0.4;
-  font-size: 0.8em;
-  color: #969696;
+  font-size: 1em;
+  color: #111111;
 }
 
 @media (max-width: 900px) {
