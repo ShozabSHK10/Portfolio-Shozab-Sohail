@@ -83,11 +83,11 @@ function TechStack() {
     <div className="tech-stack" id="techStack">
       <div className="tech-stackContainer">
         <div className="stack-title">
-          DIGITAL TOOL-BOX <span>(8)</span>
+          TECH STACK <span>(8)</span>
         </div>
 
         <div className="stack-section">
-          <div className="stack-header">(Professional At)</div>
+          <div className="stack-header">(Languages, Frameworks & Tools)</div>
 
           <div className="stack-tools">
             {items.map((item, i) => (

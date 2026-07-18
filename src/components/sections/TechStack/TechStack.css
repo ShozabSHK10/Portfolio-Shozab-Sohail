@@ -24,6 +24,7 @@
   color: #969696;
   letter-spacing: -0.01em;
   line-height: 0.8;
+  white-space: nowrap;
 }
 
 .stack-section {
@@ -34,7 +35,7 @@
 
 .stack-header {
   font-size: clamp(1rem, 2vw, 2rem);
-  color: #969696;
+  color: #ffffff;
 }
 
 .stack-tools {
