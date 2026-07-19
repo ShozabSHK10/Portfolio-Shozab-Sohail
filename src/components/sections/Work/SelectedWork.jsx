@@ -84,7 +84,7 @@ function SelectedWork() {
           ))}
       </div>
       <div className="work-button">
-        <Button link="/work" text="All Works" />
+        <Button disabled="true" text="All Works" />
       </div>
     </section>
   );

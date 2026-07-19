@@ -62,7 +62,12 @@ function Footer() {
             <a className="nav" href="/">
               Home <span className="nav-arrow">→</span>
             </a>
-            <a className="nav" href="/work">
+            <a
+              className="nav-disabled"
+              href="/work"
+              onClick={(e) => e.preventDefault()}
+              data-tooltip="Coming soon"
+            >
               Work <span className="nav-arrow">→</span>
             </a>
             <a className="nav" href="/playground">

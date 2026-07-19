@@ -1,48 +1,62 @@
 .services {
-    display: flex;
-    position: sticky;
-    background: #262626;
-    padding: 7rem 2rem;
-    z-index: 2;
+  display: flex;
+  position: sticky;
+  background: #262626;
+  padding: 7rem 2rem;
+  z-index: 2;
 }
 
 .services-container {
-    display: flex;
-    flex-direction: column;
-    background: #111111;
-    padding: 3rem;
-    gap: clamp(1.5rem, 2vw, 3rem);
-    border-radius: clamp(0.5rem, 1vw, 1rem);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #111111;
+  padding: 3rem;
+  gap: clamp(1.5rem, 2vw, 3rem);
+  border-radius: clamp(0.5rem, 1vw, 1rem);
 }
 
+.services-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 6px 6px;
+  opacity: 0.5;
+  pointer-events: none;
+}                     
+
 .services-header {
-    display: flex;
-    justify-content: space-between;
-    font-family: "Pavot-Bold";
-    letter-spacing: -0.01em;
-    font-size: clamp(3rem, 10vw, 10rem);
-    line-height: 0.8;
-    color: #969696;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Pavot-Bold";
+  letter-spacing: -0.01em;
+  font-size: clamp(3rem, 10vw, 10rem);
+  line-height: 0.8;
+  color: #969696;
 }
 
 .services-content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-
 @media (max-width: 1300px) {
-    .services-content{
-        padding-right: 0rem;
-    }
+  .services-content {
+    padding-right: 0rem;
+  }
 }
 
 @media (max-width: 900px) {
-    .services {
-        padding: 7rem 1rem;
-    }
+  .services {
+    padding: 7rem 1rem;
+  }
 
-    .services-container {
-        padding: 2rem 1rem;
-    }
+  .services-container {
+    padding: 2rem 1rem;
+  }
 }

@@ -40,10 +40,10 @@ function NavBar({ preloaderDone }) {
 
       tlRef.current
         .from(".navbar-left", { x: -40, opacity: 0 }, "0")
-        .from(".nav-link", { y: -40, opacity: 0, clearProps: "all" }, "0",)
+        .from(".nav-link", { y: -40, opacity: 0, clearProps: "all" }, "0")
         .from(".navbar-hamburger", { x: 40, opacity: 0 }, "0");
     },
-    { scope: navRef }, 
+    { scope: navRef },
   );
 
   useEffect(() => {
@@ -60,9 +60,9 @@ function NavBar({ preloaderDone }) {
         </a>
 
         <div className="navbar-right">
-          <a href="/work" className="nav-link" data-text="Work">
+          {/* <a href="/work" className="nav-link" data-text="Work">
             <span>Work</span>
-          </a>
+          </a> */}
           <a href="/playground" className="nav-link" data-text="Playground">
             <span>Playground</span>
           </a>
@@ -96,13 +96,13 @@ function NavBar({ preloaderDone }) {
 
       <div className={`navbar-drawer ${menuOpen ? "drawer-open" : ""}`}>
         <div className="drawer-header">
-          <a
+          {/* <a
             href="/work"
             className="drawer-link"
             onClick={() => toggleMenu(false)}
           >
             Work
-          </a>
+          </a> */}
           <a
             href="/playground"
             className="drawer-link"
@@ -131,7 +131,6 @@ function NavBar({ preloaderDone }) {
         <div className="menu-copyright">
           &copy;2026 Shozab Sohail. All rights reserved.
         </div>
-        
       </div>
     </>
   );
