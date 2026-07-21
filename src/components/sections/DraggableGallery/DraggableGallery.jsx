@@ -29,7 +29,7 @@ const ITEMS = [
   { id: 2, x: 3000, y: 250, w: 500, src: imgTwo },
   { id: 3, x: 250, y: 300, w: 500, src: imgThree },
   { id: 4, x: 800, y: 200, w: 500, src: imgFour },
-  { id: 5, x: 3200, y: 1100, w: 500, src: imgFive },
+  { id: 5, x: 3200, y: 1100, w: 700, src: imgFive },
   { id: 6, x: 2000, y: 1100, w: 400, src: imgSix },
   { id: 7, x: 1550, y: 1300, w: 400, src: imgSeven },
   { id: 8, x: 250, y: 2400, w: 700, src: imgEight },

@@ -2,9 +2,7 @@ import DraggableGallery from "../components/sections/DraggableGallery/DraggableG
 
 function Playground() {
     return (
-        <div className="playground">
             <DraggableGallery/>
-        </div>
     );
 }
 

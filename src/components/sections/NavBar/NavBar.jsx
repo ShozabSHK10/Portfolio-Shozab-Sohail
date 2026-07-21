@@ -96,6 +96,13 @@ function NavBar({ preloaderDone }) {
 
       <div className={`navbar-drawer ${menuOpen ? "drawer-open" : ""}`}>
         <div className="drawer-header">
+          <a
+            href="/"
+            className="drawer-link"
+            onClick={() => toggleMenu(false)}
+          >
+            Home
+          </a>
           {/* <a
             href="/work"
             className="drawer-link"
