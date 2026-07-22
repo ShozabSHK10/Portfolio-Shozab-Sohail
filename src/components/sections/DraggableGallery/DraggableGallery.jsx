@@ -39,8 +39,8 @@ const ITEMS = [
   { id: 12, x: 3200, y: 2150, w: 500, src: imgTwelve },
   { id: 13, x: 900, y: 600, w: 500, src: imgThirteen },
   { id: 14, x: 250, y: 2650, w: 700, src: imgFourteen },
-  { id: 15, x: 750, y: 1200, w: 300, src: imgFifteen },
-  { id: 16, x: 200, y: 1200, w: 500, src: imgSixteen },
+  { id: 15, x: 800, y: 1200, w: 450, src: imgFifteen },
+  { id: 16, x: 200, y: 1200, w: 550, src: imgSixteen },
   { id: 17, x: 2000, y: 1450, w: 400, src: imgSeventeen },
 ];
 

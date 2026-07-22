@@ -34,7 +34,7 @@
   align-content: center;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .hero-image {
@@ -42,7 +42,7 @@
 }
 
 .hero-image img {
-  width: 2rem;
+  width: 3rem;
   height: auto;
 }
 
@@ -58,6 +58,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
 }
 
 .hero-copied-hint {

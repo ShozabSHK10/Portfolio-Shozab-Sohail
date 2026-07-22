@@ -1,6 +1,6 @@
 import "./Hero.css";
 import Button from "../../button/Button.jsx";
-import image from "/logo/GLOBE.svg";
+import image from "/logo/STACK.svg";
 import useFitText from "../../../hooks/useFitText.js";
 import { useState, useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
